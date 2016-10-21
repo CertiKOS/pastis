@@ -1,0 +1,8 @@
+function start(z) do
+  var t, z;
+  t = 1;
+  while not t >= 10 and t >= 0 do
+    t = t + 2;
+    z = z + 1;
+  end
+end
