@@ -32,6 +32,8 @@ type ('a, 'b) func_ =
   ; fun_end_p: position
   }
 
+type ('a, 'b) program = ('a, 'b) func_ list
+
 type cmp = Le | Lt | Ge | Gt | Eq | Ne
 
 type logic =
