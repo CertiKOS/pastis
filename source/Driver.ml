@@ -1,5 +1,15 @@
 (* Quentin Carbonneaux - 2016 *)
 
+(* the work flow:
+ * parse the input file
+ * construct CFG
+ * apply weaken rules heuristically [option]
+ * do abstract interpretation using simple or apron
+ * do analysis
+ *)
+ 
+open Environment
+
 let input_file = ref ""
 let main_func = ref None
 let dump_ai = ref false
@@ -35,6 +45,8 @@ let annonarg s =
   if !input_file <> "" then
     raise (Arg.Bad "too many input files");
   input_file := s
+
+(* print the error and exit *)
 let failarg msg =
   Printf.eprintf "%s: %s\n" Sys.argv.(0) msg;
   Arg.usage argspec usagemsg;
@@ -62,6 +74,7 @@ let exec_llvm_reader f =
       Sys.argv.(0);
     raise Utils.Error
 
+(* entry point *)
 let main () =
   Arg.parse argspec annonarg usagemsg;
   if !input_file = "" then failarg "no input file provided";
@@ -72,9 +85,11 @@ let main () =
     in
     let g_file =
       try
+      	(* CFG: if input file is in IMP *)
         if ends_with ".imp" !input_file then
           let imp_file = IMP.parse_file !input_file in
           List.map Graph.from_imp imp_file
+        (* CFG: if input file is LLVM bitcode *)
         else if ends_with ".o" !input_file
              || ends_with ".bc" !input_file then
           let ic = exec_llvm_reader !input_file in
@@ -103,6 +118,7 @@ let main () =
           Sys.argv.(0) !input_file;
         raise Utils.Error
     in
+    (* get the start function *)
     let fstart =
       match !main_func with
       | Some f -> f
@@ -113,25 +129,30 @@ let main () =
     in
     if not (List.exists (fun f -> f.Types.fun_name = fstart) g_file) then
       failarg (Printf.sprintf "cannot find function '%s' to analyze" fstart);
+    (* do weakening if needed *)
     let g_file =
       if !no_weaken then g_file else
       List.map Heuristics.add_weaken g_file
     in
+    (* instantiate an abstract interpreter *)
     let module AI = (val begin
         match !ai with
         | "apron" -> (module Graph.AbsInt.Apron)
         | _       -> (module Graph.AbsInt.Simple)
       end: Graph.AbsInt)
     in
+    (* do abstract interpretation *)
     let ai_results = AI.analyze ~dump:!dump_ai g_file fstart in
     let query =
       let open Polynom in
         (Poly.of_monom (Monom.of_var "z") (+1.))
     in
+    (* add focus functions if needed *)
     let g_file =
       if !no_focus then g_file else
       List.map (Heuristics.add_focus ~deg:1 ai_results AI.get_nonneg) g_file
     in
+    (* apply the analysis *)
     let st_results = Analysis.run ai_results AI.is_nonneg g_file fstart query in
     let poly_print =
       if !ascii then Polynom.Poly.print_ascii else Polynom.Poly.print
