@@ -1,10 +1,12 @@
 (* Quentin Carbonneaux - 2016 *)
 
+(* Van Chan Ngo, 2016 *)
 (* the work flow:
  * parse the input file
  * construct CFG
  * apply weaken rules heuristically [option]
  * do abstract interpretation using simple or apron
+ * add focus functions if needed
  * do analysis
  *)
  
