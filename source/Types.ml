@@ -1,4 +1,5 @@
 (* Quentin Carbonneaux - 2016 *)
+(* Van Chan Ngo, 2016 *)
 
 type id = string
 
@@ -17,6 +18,7 @@ type expr =
   | ESub of expr * expr
   | EMul of expr * expr
 
+(* Focus functions *)
 type free_expr =
   | FBase of expr
   | FApply of id * free_expr list * position
@@ -44,3 +46,4 @@ type logic =
   | LAnd of logic * logic
   | LOr of logic * logic
   | LNot of logic
+

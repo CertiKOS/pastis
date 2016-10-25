@@ -10,8 +10,6 @@
  * do analysis
  *)
  
-open Environment
-
 let input_file = ref ""
 let main_func = ref None
 let dump_ai = ref false

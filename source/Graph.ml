@@ -10,10 +10,12 @@ let stats =
   { weaken_map = [] }
 
 (* Construct a graph representation of the
-   given IMP program.  The nodes of the graph
+   given IMP program. The nodes of the graph
    are program points and the edges have
    actions on them.
 *)
+
+ 
 let from_imp impf =
 
   let h_position = Hashtbl.create 51 in
@@ -28,8 +30,7 @@ let from_imp impf =
   in
 
   let new_edge src act dst =
-    if dst < 0 then
-      failwith "invalid input program";
+    if dst < 0 then failwith "invalid input program";
     Hashtbl.add h_edges src (act, dst)
   in
 
