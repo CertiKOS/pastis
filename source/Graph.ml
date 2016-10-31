@@ -1,5 +1,7 @@
 (* Quentin Carbonneaux - 2016 *)
 
+(* Van Chan Ngo, 2016 *)
+
 open Types
 include Graph_Types
 
@@ -15,6 +17,10 @@ let stats =
    actions on them.
 *)
 
+(*
+ * the set of all edges from a node A is represented
+ * by an element with index A in an array of (action * node) list
+ *)
  
 let from_imp impf =
 
@@ -92,6 +98,7 @@ let from_imp impf =
     g_position.(i) <- Hashtbl.find h_position i;
     g_edges.(i) <- Hashtbl.find_all h_edges i;
   done;
+  (* impf is typed func in Graph_Types in which its body is a graph *)
   { impf with fun_body = { g_start; g_end; g_edges; g_position } }
 
 let rpo_order gfunc =

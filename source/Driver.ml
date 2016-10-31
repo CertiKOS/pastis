@@ -150,7 +150,7 @@ let main () =
     (* add focus functions if needed *)
     let g_file =
       if !no_focus then g_file else
-      List.map (Heuristics.add_focus ~deg:1 ai_results AI.get_nonneg) g_file
+      List.map (Heuristics.add_focus ~deg:2 ai_results AI.get_nonneg) g_file
     in
     (* apply the analysis *)
     let st_results = Analysis.run ai_results AI.is_nonneg g_file fstart query in

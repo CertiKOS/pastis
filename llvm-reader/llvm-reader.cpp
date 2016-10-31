@@ -319,7 +319,7 @@ struct Edge {
 	void iterVars(const std::function<void(std::string &)> &f)
 	{
 		switch (type) {
-		case Guard:	
+		case Guard:
 			cond.iterVars(f);
 			break;
 		case Assign:
@@ -717,6 +717,11 @@ unsigned processBlock(BasicBlock *BB, Func &f, DenseMap<BasicBlock *, unsigned> 
 	return node;
 }
 
+/* fix ugly PHI node */
+void fixPHINode(Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
+
+}
+
 Func extractFunc(Function &F)
 {
 	std::vector<std::string> args;
@@ -745,6 +750,9 @@ Func extractFunc(Function &F)
 	}
 	f.start = start;
 
+	/* fix PHI node */
+	fixPHINode(f, bbMap);
+	
 	return f;
 }
 
