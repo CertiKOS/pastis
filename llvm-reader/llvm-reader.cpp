@@ -718,8 +718,29 @@ unsigned processBlock(BasicBlock *BB, Func &f, DenseMap<BasicBlock *, unsigned> 
 }
 
 /* fix ugly PHI node */
-void fixPHINode(Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
+void fixPHINode(BasicBlock *BB, Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
+	/* iterate through BBs */
+	for (auto BI = BB->rbegin(), BE = BB->rend(); BI != BE; ++BI) {
+		Instruction *CurI = &*BI;
 
+		if (BranchInst *BI = dyn_cast<BranchInst>(CurI)) {
+			if (PHINode *PnI = dyn_cast<PHINode>(BI->getCondition())) {
+			  /* get number of incoming BBs to this PHI node */
+			  unsigned nincome = PnI->getNumIncomingValues();
+			  std::cout << "Number of incoming = " << nincome << std::endl;
+			  for (unsigned i = 0; i < nincome; i ++) {
+			    if (ConstantInt *CI = dyn_cast<ConstantInt>(PnI->getIncomingValue(i))) {
+			      if (CI->getValue() == 0)
+			        std::cout << "Incoming value is false" << std::endl;
+			        BasicBlock *BBFalse = PnI->getIncomingBlock(i);
+			        BasicBlock *BBLoopExit = BI->getSuccessor(1);
+			        /* get condition in BBFalse */
+			        // TODO
+			    } // end if
+			  } // end for
+			} // end if
+		} // end if
+	} // end for
 }
 
 Func extractFunc(Function &F)
@@ -751,8 +772,8 @@ Func extractFunc(Function &F)
 	f.start = start;
 
 	/* fix PHI node */
-	fixPHINode(f, bbMap);
-	
+	fixPHINode(&F.getEntryBlock(), f, bbMap);
+
 	return f;
 }
 
