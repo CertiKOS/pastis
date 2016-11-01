@@ -1,0 +1,37 @@
+digraph test{
+n_0 [shape=circle,fontsize=8,label=""];
+n_0 -> n_1;
+n_1 [shape=circle,fontsize=8,label=""];
+e_0 [shape=box,fontsize=12,label="guard n.addr > 0"];
+n_1 -> e_0;
+e_0 -> n_5;
+e_1 [shape=box,fontsize=12,label="guard n.addr <= 0"];
+n_1 -> e_1;
+e_1 -> n_7;
+n_2 [shape=circle,fontsize=8,label=""];
+e_2 [shape=box,fontsize=12,label="guard c.addr <= 1"];
+n_2 -> e_2;
+e_2 -> n_5;
+e_3 [shape=box,fontsize=12,label="guard c.addr > 1"];
+n_2 -> e_3;
+e_3 -> n_6;
+n_3 [shape=circle,fontsize=8,label=""];
+n_3 -> n_4;
+n_4 [shape=circle,fontsize=8,label=""];
+n_4 -> n_1;
+n_5 [shape=circle,fontsize=8,label=""];
+e_4 [shape=box,fontsize=12,label="assign n.addr = (n.addr - 1)"];
+n_5 -> e_4;
+e_4 -> n_3;
+n_6 [shape=circle,fontsize=8,label="end"];
+n_7 [shape=circle,fontsize=8,label=""];
+n_7 -> n_2;
+n_8 [shape=circle,fontsize=8,label=""];
+e_5 [shape=box,fontsize=12,label="assign c.addr = c"];
+n_8 -> e_5;
+e_5 -> n_0;
+n_9 [shape=circle,fontsize=8,label="start"];
+e_6 [shape=box,fontsize=12,label="assign n.addr = n"];
+n_9 -> e_6;
+e_6 -> n_8;
+}

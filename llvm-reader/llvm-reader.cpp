@@ -398,7 +398,8 @@ struct Func {
 		return &body.at(s);
 	}
 
-	unsigned getNodeSize() {
+	unsigned getNodeSize()
+	{
 		return body.size();
 	}
 
