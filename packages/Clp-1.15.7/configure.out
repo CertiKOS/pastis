@@ -1,0 +1,436 @@
+checking build system type... i386-apple-darwin16.1.0
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ANSI C... none needed
+configure: C compiler options are: -O3 -pipe -DNDEBUG -Wimplicit -Wparentheses -Wsequence-point -Wreturn-type -Wcast-qual -Wall -Wno-unknown-pragmas -Wno-long-long  
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking whether C++ compiler c++ works... yes
+configure: C++ compiler options are: -O3 -pipe -DNDEBUG -Wparentheses -Wreturn-type -Wcast-qual -Wall -Wpointer-arith -Wwrite-strings -Wconversion -Wno-unknown-pragmas -Wno-long-long  
+configure: Trying to determine Fortran compiler name
+checking for xlf_r... no
+checking for fort77... no
+checking for gfortran... no
+checking for ifort... no
+checking for g95... no
+checking for f77... no
+checking for g77... no
+checking for pgf90... no
+checking for pgf77... no
+checking for ifc... no
+checking for frt... no
+checking for af77... no
+configure: Fortran compiler options are:  
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking dependency style of c++... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking host system type... i386-apple-darwin16.1.0
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for ld used by cc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... cc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking how to run the C++ preprocessor... c++ -E
+checking the maximum length of command line arguments... 196608
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if cc supports -fno-rtti -fno-exceptions... yes
+checking for cc option to produce PIC... -fno-common
+checking if cc PIC flag -fno-common works... yes
+checking if cc static flag -static works... no
+checking if cc supports -c -o file.o... yes
+checking whether the cc linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... darwin16.1.0 dyld
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by c++... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+checking whether the c++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+checking for c++ option to produce PIC... -fno-common
+checking if c++ PIC flag -fno-common works... yes
+checking if c++ static flag -static works... no
+checking if c++ supports -c -o file.o... yes
+checking whether the c++ linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... darwin16.1.0 dyld
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for unavailable option to produce PIC... -fno-common
+checking if unavailable PIC flag -fno-common works... no
+checking if unavailable static flag -static works... no
+checking if unavailable supports -c -o file.o... no
+checking whether the unavailable linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... darwin16.1.0 dyld
+checking how to hardcode library paths into programs... immediate
+configure: Build is "i386-apple-darwin16.1.0".
+configure: Applying patches to libtool for Darwin
+checking if library version is set... no
+checking whether source of project Blas is available and should be compiled... no, source file ./ThirdParty/Blas/daxpy.f not available
+checking whether source of project Lapack is available and should be compiled... no, source file ./ThirdParty/Lapack/LAPACK/SRC/dlarf.f not available
+checking whether source of project Metis is available and should be compiled... no, source file ./ThirdParty/Metis/metis-4.0/Lib/balance.c not available
+checking whether source of project Mumps is available and should be compiled... no, source file ./ThirdParty/Mumps/MUMPS/src/dmumps_part1.F not available
+checking whether source of project Glpk is available and should be compiled... no, source file ./ThirdParty/Glpk/glpk/src/glplpx01.c not available
+checking whether source of project Sample is available and should be compiled... yes, source in Data/Sample
+checking whether source of project Netlib is available and should be compiled... no
+checking whether source of project CoinUtils is available and should be compiled... yes, source in CoinUtils
+checking whether source of project Osi is available and should be compiled... yes, source in Osi
+checking whether source of project Clp is available and should be compiled... yes, source in Clp
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for dot... YES
+checking for doxygen doc'n for CoinUtils ... /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/doxydoc (tag)
+checking for doxygen doc'n for Osi ... /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/doxydoc (tag)
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doxydoc/doxygen.conf
+config.status: executing depfiles commands
+configure: configuring in Data/Sample
+configure: running /bin/sh './configure' --prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox  '--enable-static' '--prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox' 'CC=cc' 'CXX=c++' --cache-file=/dev/null --srcdir=.
+checking for svnversion... yes
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether this is a VPATH configuration... no
+checking build system type... i386-apple-darwin16.1.0
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating coindatasample.pc
+config.status: creating coindatasample-uninstalled.pc
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of DataSample successful
+configure: configuring in CoinUtils
+configure: running /bin/sh './configure' --prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox  '--enable-static' '--prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox' 'CC=cc' 'CXX=c++' --cache-file=/dev/null --srcdir=.
+checking build system type... i386-apple-darwin16.1.0
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ANSI C... none needed
+configure: C compiler options are: -O3 -pipe -DNDEBUG -Wimplicit -Wparentheses -Wsequence-point -Wreturn-type -Wcast-qual -Wall -Wno-unknown-pragmas -Wno-long-long   -DCOINUTILS_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking whether C++ compiler c++ works... yes
+configure: C++ compiler options are: -O3 -pipe -DNDEBUG -Wparentheses -Wreturn-type -Wcast-qual -Wall -Wpointer-arith -Wwrite-strings -Wconversion -Wno-unknown-pragmas -Wno-long-long   -DCOINUTILS_BUILD
+configure: Trying to determine Fortran compiler name
+checking for xlf_r... no
+checking for fort77... no
+checking for gfortran... no
+checking for ifort... no
+checking for g95... no
+checking for f77... no
+checking for g77... no
+checking for pgf90... no
+checking for pgf77... no
+checking for ifc... no
+checking for frt... no
+checking for af77... no
+configure: Fortran compiler options are:  
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking dependency style of c++... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 12:12:9
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking whether isfinite is declared... no
+checking whether finite is declared... yes
+checking for cmath... (cached) yes
+checking for cfloat... (cached) yes
+checking for cieeefp... (cached) no
+checking for ieeefp.h... (cached) no
+checking whether isnan is declared... no
+checking whether std::isnan(42.42) is declared... yes
+checking cinttypes usability... yes
+checking cinttypes presence... yes
+checking for cinttypes... yes
+checking cstdint usability... yes
+checking cstdint presence... yes
+checking for cstdint... yes
+checking for int64_t... yes
+checking for intptr_t... yes
+checking windows.h usability... no
+checking windows.h presence... no
+checking for windows.h... no
+checking endian.h usability... no
+checking endian.h presence... no
+checking for endian.h... no
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for BLAS in Veclib... no
+checking whether -lblas has BLAS... no
+checking for COIN-OR package Blas... not given: No package 'coinblas' found
+checking whether -llapack has LAPACK... no
+checking for COIN-OR package Lapack... not given: No package 'coinlapack' found
+checking for COIN-OR package Glpk... not given: No package 'coinglpk' found
+checking for COIN-OR package Sample... yes: 1.2.9 
+checking for COIN-OR package Netlib... not given: No package 'coindatanetlib' found
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for gzopen in -lz... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking for BZ2_bzReadOpen in -lbz2... yes
+checking whether this is a VPATH configuration... no
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for dot... YES
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating test/Makefile
+config.status: creating coinutils.pc
+config.status: creating coinutils-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+config.status: creating src/config_coinutils.h
+config.status: src/config_coinutils.h is unchanged
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of CoinUtils successful
+configure: configuring in Osi
+configure: running /bin/sh './configure' --prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox  '--enable-static' '--prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox' 'CC=cc' 'CXX=c++' --cache-file=/dev/null --srcdir=.
+checking build system type... i386-apple-darwin16.1.0
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ANSI C... none needed
+configure: C compiler options are: -O3 -pipe -DNDEBUG -Wimplicit -Wparentheses -Wsequence-point -Wreturn-type -Wcast-qual -Wall -Wno-unknown-pragmas -Wno-long-long   -DOSI_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking whether C++ compiler c++ works... yes
+configure: C++ compiler options are: -O3 -pipe -DNDEBUG -Wparentheses -Wreturn-type -Wcast-qual -Wall -Wpointer-arith -Wwrite-strings -Wconversion -Wno-unknown-pragmas -Wno-long-long   -DOSI_BUILD
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking dependency style of c++... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 12:7:11
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for COIN-OR package CoinUtils... yes: 2.9.12 
+checking for COIN-OR package Glpk... not given: No package 'coinglpk' found
+checking for COIN-OR package SoPlex... not given: No package 'coinsoplex' found
+checking for COIN-OR package Sample... yes: 1.2.9 
+checking for COIN-OR package Netlib... not given: No package 'coindatanetlib' found
+checking if user provides library for Cplex... no
+checking if user provides library for Mosek... no
+checking if user provides library for Xpress... no
+checking if user provides library for Gurobi... no
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for dot... YES
+checking for doxygen doc'n for CoinUtils ... /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils/doxydoc (tag)
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating examples/Makefile
+config.status: creating src/Osi/Makefile
+config.status: creating src/OsiCpx/Makefile
+config.status: creating src/OsiGlpk/Makefile
+config.status: creating src/OsiMsk/Makefile
+config.status: creating src/OsiXpr/Makefile
+config.status: creating src/OsiGrb/Makefile
+config.status: creating src/OsiSpx/Makefile
+config.status: creating src/OsiCommonTest/Makefile
+config.status: creating test/Makefile
+config.status: creating osi.pc
+config.status: creating osi-uninstalled.pc
+config.status: creating osi-unittests.pc
+config.status: creating osi-unittests-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/Osi/config.h
+config.status: src/Osi/config.h is unchanged
+config.status: creating src/Osi/config_osi.h
+config.status: src/Osi/config_osi.h is unchanged
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of Osi successful
+configure: configuring in Clp
+configure: running /bin/sh './configure' --prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox  '--enable-static' '--prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox' 'CC=cc' 'CXX=c++' --cache-file=/dev/null --srcdir=.
+checking build system type... i386-apple-darwin16.1.0
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ANSI C... none needed
+configure: C compiler options are: -O3 -pipe -DNDEBUG -Wimplicit -Wparentheses -Wsequence-point -Wreturn-type -Wcast-qual -Wall -Wno-unknown-pragmas -Wno-long-long   -DCLP_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking whether C++ compiler c++ works... yes
+configure: C++ compiler options are: -O3 -pipe -DNDEBUG -Wparentheses -Wreturn-type -Wcast-qual -Wall -Wpointer-arith -Wwrite-strings -Wconversion -Wno-unknown-pragmas -Wno-long-long   -DCLP_BUILD
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking dependency style of c++... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 13:7:12
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for COIN-OR package CoinUtils... yes: 2.9.12 
+checking for COIN-OR package Osi... yes: 0.106.7 
+checking for COIN-OR package OsiTests... yes: 0.106.7 
+checking for COIN-OR package Sample... yes: 1.2.9 
+checking for COIN-OR package Netlib... not given: No package 'coindatanetlib' found
+checking if user provides library for AMD... no
+checking if user provides library for CHOLMOD... no
+checking for COIN-OR package Glpk... not given: No package 'coinglpk' found
+checking for COIN-OR package Mumps... not given: No package 'coinmumps' found
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking whether this is a VPATH configuration... no
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for dot... YES
+checking for doxygen doc'n for CoinUtils ... /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils/doxydoc (tag)
+checking for doxygen doc'n for Osi ... /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Osi/doxydoc (tag)
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating examples/Makefile
+config.status: creating src/Makefile
+config.status: creating src/OsiClp/Makefile
+config.status: creating test/Makefile
+config.status: creating clp.pc
+config.status: creating clp-uninstalled.pc
+config.status: creating osi-clp.pc
+config.status: creating osi-clp-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+config.status: creating src/config_clp.h
+config.status: src/config_clp.h is unchanged
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of Clp successful
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Main configuration of Clp successful

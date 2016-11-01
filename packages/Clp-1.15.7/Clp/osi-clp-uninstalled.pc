@@ -1,0 +1,10 @@
+prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
+libdir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/src/OsiClp
+
+Name: OsiClp
+Description: COIN-OR Open Solver Interface for CLP
+URL: https://projects.coin-or.org/Osi
+Version: 1.15.7
+Libs: ${libdir}/libOsiClp.la 
+Cflags: -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/src/OsiClp
+Requires: clp osi 

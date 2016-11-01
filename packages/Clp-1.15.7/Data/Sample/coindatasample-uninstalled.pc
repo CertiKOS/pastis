@@ -1,0 +1,8 @@
+datadir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Data/Sample
+
+Name: Sample
+Description: Sample models
+URL: https://projects.coin-or.org/svn/Data/Sample
+Version: 1.2.9
+Libs:
+Cflags:

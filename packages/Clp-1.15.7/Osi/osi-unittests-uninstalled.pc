@@ -1,0 +1,10 @@
+prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
+libdir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/src/OsiCommonTest
+
+Name: OsiUnitTests
+Description: COIN-OR Open Solver Interface Common Unit Tests
+URL: https://projects.coin-or.org/Osi
+Version: 0.106.7
+Libs: ${libdir}/libOsiCommonTests.la
+Cflags: -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/src/OsiCommonTest
+Requires: osi

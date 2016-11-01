@@ -38,7 +38,4 @@ The following options should be disabled:
 - HAS_PPL (Apron with PPL compilation untested under Windows)
 - HAS_LONG_DOUBLE (long double not supported by math library under Windows)
 
-Do the same with mlgmpidl/Makefile.config.model
-
-Now, (make rebuild), make and make install in the apron top-level directory
-should work.
+Now, (make rebuild), make and make install.

@@ -751,6 +751,21 @@ Edge* getEdgeBetween(Func &f, unsigned n1, unsigned n2, unsigned &foundnode) {
 			q.push(childnode);
 		}
 	}
+
+	return nullptr;
+}
+unsigned getLoopCondition(PHINode *phiNode) {
+	unsigned notfalsecounter = 0;
+	unsigned index = -1u;
+	for (unsigned i = 0; i < phiNode->getNumIncomingValues(); i++) {
+		if (!isa<ConstantInt>(phiNode->getIncomingValue(i))) {
+			notfalsecounter += 1;
+			index = i;
+		}
+	}
+	if (notfalsecounter == 1)
+		return index;
+	return -1u;
 }
 
 /* fix ugly PHI node */
@@ -758,33 +773,53 @@ void fixPHINode(Function &F, Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
 	for (inst_iterator instIt = inst_begin(F); instIt != inst_end(F); instIt++) {
 		if (!isa<PHINode>(&*instIt))
 			continue;
-		PHINode *phiNode = dyn_cast<PHINode>(&*instIt);
-		for (unsigned i = 0; i < phiNode->getNumIncomingValues(); i ++) {
-			if (!isa<ConstantInt>(phiNode->getIncomingValue(i)))
+		PHINode *phiNodeInstr = dyn_cast<PHINode>(&*instIt);
+		for (unsigned i = 0; i < phiNodeInstr->getNumIncomingValues(); i ++) {
+			if (!isa<ConstantInt>(phiNodeInstr->getIncomingValue(i)))
 				continue;
-			ConstantInt *CI = dyn_cast<ConstantInt>((phiNode->getIncomingValue(i)));
-			BasicBlock *phiBlock = phiNode->getParent();
+
+			ConstantInt *CI = dyn_cast<ConstantInt>((phiNodeInstr->getIncomingValue(i)));
+			BasicBlock *phiBlock = phiNodeInstr->getParent();
 			// get a false incoming block
 			if (CI->getValue() == 0) {
-				BasicBlock *falseBlock = phiNode->getIncomingBlock(i);
-				// next block from false branch - 2sd successor
+				BasicBlock *falseBlock = phiNodeInstr->getIncomingBlock(i);
 				for (BasicBlock::iterator iphiBlock = phiBlock->begin(), ephiBlock = phiBlock->end(); iphiBlock != ephiBlock; ++iphiBlock) {
 					if (BranchInst *bri = dyn_cast<BranchInst>(&*iphiBlock)) {
+						BasicBlock *bodyBlock = bri->getSuccessor(0);
 						BasicBlock *exitBlock = bri->getSuccessor(1);
 						// create a direct edge from falseBlock to exitBlock
 						auto it_falseNode = bbMap.find(falseBlock);
+						auto it_bodyNode = bbMap.find(bodyBlock);
 						auto it_exitNode = bbMap.find(exitBlock);
 						auto it_phiNode = bbMap.find(phiBlock);
 						if ((it_falseNode != bbMap.end()) && (it_exitNode != bbMap.end())) {
 						  unsigned falseNode = it_falseNode->second;
+							unsigned bodyNode = it_bodyNode->second;
 						  unsigned phiNode = it_phiNode->second;
 							unsigned exitNode = it_exitNode->second;
 							// get edge from falseNode to phiNode
 							unsigned foundnode = -1u;
 							Edge* foundedge = getEdgeBetween(f, falseNode, phiNode, foundnode);
 							if (foundnode != -1u) {
-								//std::cout << "found node " << foundedge->dest << " with edge type " << foundedge->type << std::endl;
 								foundedge->dest = exitNode;
+								// change branch conditions
+								unsigned condindex = getLoopCondition(phiNodeInstr);
+								if (condindex != -1u) {
+									Cond C = valueCond(phiNodeInstr->getIncomingValue(condindex), f);
+									Cond NotC = C.negate();
+									unsigned truefoundnode = -1u;
+									Edge* trueedge = getEdgeBetween(f, phiNode, bodyNode, truefoundnode);
+									if (truefoundnode != -1u) {
+										unsigned falsefoundnode = -1u;
+										Edge* falseedge = getEdgeBetween(f, phiNode, exitNode, falsefoundnode);
+										if (falsefoundnode != -1u) {
+											trueedge->cond = C;
+											trueedge->type = Edge::Guard;
+											falseedge->cond = NotC;
+											falseedge->type = Edge::Guard;
+										}
+									}
+								}
 							}
 						}
 					}
@@ -792,10 +827,47 @@ void fixPHINode(Function &F, Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
 			}
 			// get a true incoming block
 			else {
-				BasicBlock *trueBlock = phiNode->getIncomingBlock(i);
-				// next block from true branch - 1st successor
-				if (BranchInst *bri = dyn_cast<BranchInst>(&*instIt)) {
-					BasicBlock *exitBlock = bri->getSuccessor(0);
+				BasicBlock *trueBlock = phiNodeInstr->getIncomingBlock(i);
+				for (BasicBlock::iterator iphiBlock = phiBlock->begin(), ephiBlock = phiBlock->end(); iphiBlock != ephiBlock; ++iphiBlock) {
+					if (BranchInst *bri = dyn_cast<BranchInst>(&*iphiBlock)) {
+						BasicBlock *bodyBlock = bri->getSuccessor(0);
+						BasicBlock *exitBlock = bri->getSuccessor(1);
+						// create a direct edge from trueBlock to bodyBlock
+						auto it_trueNode = bbMap.find(trueBlock);
+						auto it_bodyNode = bbMap.find(bodyBlock);
+						auto it_exitNode = bbMap.find(exitBlock);
+						auto it_phiNode = bbMap.find(phiBlock);
+						if ((it_trueNode != bbMap.end()) && (it_bodyNode != bbMap.end())) {
+						  unsigned trueNode = it_trueNode->second;
+							unsigned bodyNode = it_bodyNode->second;
+						  unsigned phiNode = it_phiNode->second;
+							unsigned exitNode = it_exitNode->second;
+							// get edge from trueNode to phiNode
+							unsigned foundnode = -1u;
+							Edge* foundedge = getEdgeBetween(f, trueNode, phiNode, foundnode);
+							if (foundnode != -1u) {
+								foundedge->dest = bodyNode;
+								// change branch conditions
+								unsigned condindex = getLoopCondition(phiNodeInstr);
+								if (condindex != -1u) {
+									Cond C = valueCond(phiNodeInstr->getIncomingValue(condindex), f);
+									Cond NotC = C.negate();
+									unsigned truefoundnode = -1u;
+									Edge* trueedge = getEdgeBetween(f, phiNode, bodyNode, truefoundnode);
+									if (truefoundnode != -1u) {
+										unsigned falsefoundnode = -1u;
+										Edge* falseedge = getEdgeBetween(f, phiNode, exitNode, falsefoundnode);
+										if (falsefoundnode != -1u) {
+											trueedge->cond = C;
+											trueedge->type = Edge::Guard;
+											falseedge->cond = NotC;
+											falseedge->type = Edge::Guard;
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}

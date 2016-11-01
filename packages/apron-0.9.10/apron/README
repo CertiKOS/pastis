@@ -1,66 +1,91 @@
-# $Id$
-
-# This file is part of the APRON Library, released under LGPL license
-# with an exception allowing the redistribution of statically linked
-# executables.
+# This file is part of the APRON Library, released under LGPL license, except
+# files requiring the PPL library (in ppl and products subdirectories)
 
 # Please read the COPYING file packaged in the distribution
 
-Source for APRON commoninterface files.
+NOTE: If you do not already have MLGMPIDL, you can use the apron-dist
+directory in SVN repository.
 
-  To compile and/or to generate the doc, you need:
-  * the GMP and MPFR libraries, for multiprecision arithmetic)
-  * the ITV library (included)
 
-  You need to generate a Makefile.config file from the
-  Makefile.config.model in the parent directory of this file.
+The developpers are using INTEL/linux machines. Look at README.windows and
+README.mac for additional specific informations.
 
-Most useful make targets:
+PREREQUISITES
+-------------
 
-  all: 
-    C library (libapron.a libapron_debug.a, libapron.so)
-	(note: they include libitv.a)
-  apron.ps
-  apron.info:
-  apron.html:
-    the documentation
+- C API (required)
+  * GCC
+  * GMP 4.2 and MPFR 2.2 or up
+  * Optionally, 
+    * PPL library (PARMA Polyhedra library, http://www.cs.unipr.it/ppl/)
+      - patch to apply before compiling it (see ./ppl/README)
+      - GMPXX (GMP compiled with configuration option --enable-cxx)
 
-  clean:
-  distclean:
+- OCaml API (optional)
+  * MLGMPIDL (http://www.inrialpes.fr/pop-art/people/bjeannet/mlxxxidl-forge/mlgmpidl, SVN: svn://scm.gforge.inria.fr/svn/mlxxxidl/mlgmpidl/)
+  * OCaml 3.09 or up (http://www.caml.org)
+  * CamlIDL 1.05 (http://caml.inria.fr/camlidl)
+  * GNU sed 4.1 or up, GNU m4 (not necessary if you download an archive, but
+    strongly recommended)
+- C++ API (optional)
+  * GCC 4.1.2 or up
+- Documentation (optional)
+  * latex, dvipdf, makeinfo, texi2html, texi2dvi
 
-Header files associated to C files and considered as modules:
-  ap_scalar.h     : scalars (numbers)     
-  ap_interval.h   : intervals on scalars 
-  ap_coeff.h      : coefficients (either scalars or intervals)
-  ap_dimension.h  : dimensions and related operations
-  ap_linexpr0.h   : (interval) linear expressions, level 0
-  ap_lincons0.h   : (interval) linear constraints, level 0
-  ap_generator0.h : generators, level 0
-  ap_texpr0.h     : tree expressions, level 0
-  ap_tcons0.h     : tree constraints, level 0
-  ap_manager.h    : managers
-  ap_policy.h     : policy iterations
-  ap_abstract0.h: : abstract values, level 0
-  ap_var.h        : variables 
-  ap_environment.h: environment binding variables to dimensions
-  ap_linexpr1.h   : (interval) linear expressions, level 1
-  ap_lincons1.h   : (interval) linear constraints, level 1
-  ap_generator1.h : generators, level 1
-  ap_texpr0.h     : tree expressions, level 1
-  ap_tcons0.h     : tree constraints, level 1
-  ap_abstract1.h  : abstract values, level 1
-  ap_generic.h    : generic functions for library adaptors/implementors
-  ap_linearize.h  : generic functions for (quasi)linearisation of interval
-                    expressions and tree expressions.
+CONFIGURATION and COMPILATION
+-----------------------------
 
-Additional header files:
-  ap_config.h  : miscellaneous stuff (booleans, ...)
-  ap_expr0.h   : expressions, constraints, .. at level 0
-  ap_expr1.h   : expressions, constraints, .. at level 1
-  ap_global0.h : all stuff relevant for level 0
-  ap_global1.h : all stuff relevant for level 1
+1. Copy Makefile.config.model into Makefile.config and edit the
+   _PREFIX paths to suit your installation (you might want to set
+   APRON_PREFIX, MLGMPIDL_PREFIX, CAMLIDL_PREFIX and CAML_PREFIX
+   to some of your directory instead of the default /tmp).
 
-* When linking objects against APRON, APRON requires:
-  libmpfr(.a) and libgmp(.a) libraries.
+2. If you download via subversion repository, and you want the
+   OCaml API: 'make rebuild'
 
-  It already include libitv(.a)
+3. 'make'
+   'make install'
+
+4. Other targets:
+
+   make c (C and possibly C++ version)
+   make ml (OCaml stuff)
+   make doc (not useful for a normal user)
+   make clean (clean things, with the exception of generated files)
+   make mostlyclean (clean all it can clean, implies clean)
+   make rebuild (rebuild generated files, mainly for OCaml interface)
+   make distclean (clean the distribution directories)
+   make install (installs in directories specified in Makefile.config)
+
+ORGANISATION IN DIRECTORIES 
+--------------------------- 
+
+The main directory contain the following subpackages of the APRON
+project:
+
+apron:      apron interface, C version
+apronxx:    apron interface, C++ version (compiled if HAS_CPP defined)
+mlapronidl: apron interface, OCaml version (compiled if HAS_OCAML defined)
+
+box:      interval library
+octagons: octagon library
+newpolka: convex polyhedra and linear equalities library
+ppl:      wrapper to call the Parma Polyhedra Library from APRON under
+	  GPL (instead of LGPL) license.  (compiled if HAS_PPL
+	  defined)
+
+products: - reduced product of NewPolka convex polyhedra and PPL
+	    linear congruences (compiled if HAS_PPL defined)
+
+examples: some examples (C and OCaml)
+tests:    some (manual) tests
+
+mlgmpidl: OCaml interface for the GMP and MPFR libraries, used by mlapronidl.
+	  (compiled if HAS_OCAML defined)
+
+num: manipulating "generic" numbers (used by intervals, newpolka,
+     octagons, linearisation, etc...).
+
+itv: built on top of num: intervals, interval linear expressions
+     and constraints, linearisation
+
