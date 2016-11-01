@@ -1,4 +1,5 @@
 /* Quentin Carbonneaux - 2016 */
+/* Van Chan Ngo, 2016 */
 
 #include <iostream>
 #include <fstream>
@@ -6,6 +7,8 @@
 #include <set>
 #include <algorithm>
 #include <functional>
+#include <stack>
+#include <queue>
 
 #include <llvm/IR/LLVMContext.h>
 #include <llvm/Bitcode/ReaderWriter.h>
@@ -13,6 +16,7 @@
 #include <llvm/IR/Function.h>
 #include <llvm/IR/BasicBlock.h>
 #include <llvm/IR/Instruction.h>
+#include <llvm/IR/InstIterator.h>
 #include <llvm/IR/Instructions.h>
 #include <llvm/IR/Constant.h>
 #include <llvm/IR/Constants.h>
@@ -389,6 +393,15 @@ struct Func {
 		body.at(s).push_back(std::move(e));
 	}
 
+	std::vector<Edge>* getEdgesAt(unsigned s)
+	{
+		return &body.at(s);
+	}
+
+	unsigned getNodeSize() {
+		return body.size();
+	}
+
 	void serialize(Dumper &se)
 	{
 		std::set<std::string> locals;
@@ -630,7 +643,6 @@ unsigned processBlock(BasicBlock *BB, Func &f, DenseMap<BasicBlock *, unsigned> 
 
 	for (auto BI = BB->rbegin(), BE = BB->rend(); BI != BE; ++BI) {
 		Instruction *CurI = &*BI;
-
 		if (StoreInst *SI = dyn_cast<StoreInst>(CurI)) {
 
 			/* The only kind of regular instructions
@@ -716,31 +728,78 @@ unsigned processBlock(BasicBlock *BB, Func &f, DenseMap<BasicBlock *, unsigned> 
 		f.addEdge(newNode, node);
 	return node;
 }
+/* get edge from n1 to n2 in f
+ * using BFS algorithm
+ */
+Edge* getEdgeBetween(Func &f, unsigned n1, unsigned n2, unsigned &foundnode) {
+	if (n1 == n2)
+		return nullptr;
+
+	std::queue<unsigned> q;
+	q.push(n1);
+
+	while (!q.empty()) {
+		unsigned currentnode = q.front();
+		q.pop();
+		std::vector<Edge> *currentnode_edges = f.getEdgesAt(currentnode);
+		for (unsigned k = 0; k < currentnode_edges->size(); k++) {
+			unsigned childnode = currentnode_edges->at(k).dest;
+			if (childnode == n2) {
+				foundnode = currentnode;
+				return &(currentnode_edges->at(k));
+			}
+			q.push(childnode);
+		}
+	}
+}
 
 /* fix ugly PHI node */
-void fixPHINode(BasicBlock *BB, Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
-	/* iterate through BBs */
-	for (auto BI = BB->rbegin(), BE = BB->rend(); BI != BE; ++BI) {
-		Instruction *CurI = &*BI;
-
-		if (BranchInst *BI = dyn_cast<BranchInst>(CurI)) {
-			if (PHINode *PnI = dyn_cast<PHINode>(BI->getCondition())) {
-			  /* get number of incoming BBs to this PHI node */
-			  unsigned nincome = PnI->getNumIncomingValues();
-			  std::cout << "Number of incoming = " << nincome << std::endl;
-			  for (unsigned i = 0; i < nincome; i ++) {
-			    if (ConstantInt *CI = dyn_cast<ConstantInt>(PnI->getIncomingValue(i))) {
-			      if (CI->getValue() == 0)
-			        std::cout << "Incoming value is false" << std::endl;
-			        BasicBlock *BBFalse = PnI->getIncomingBlock(i);
-			        BasicBlock *BBLoopExit = BI->getSuccessor(1);
-			        /* get condition in BBFalse */
-			        // TODO
-			    } // end if
-			  } // end for
-			} // end if
-		} // end if
-	} // end for
+void fixPHINode(Function &F, Func &f, DenseMap<BasicBlock *, unsigned> &bbMap) {
+	for (inst_iterator instIt = inst_begin(F); instIt != inst_end(F); instIt++) {
+		if (!isa<PHINode>(&*instIt))
+			continue;
+		PHINode *phiNode = dyn_cast<PHINode>(&*instIt);
+		for (unsigned i = 0; i < phiNode->getNumIncomingValues(); i ++) {
+			if (!isa<ConstantInt>(phiNode->getIncomingValue(i)))
+				continue;
+			ConstantInt *CI = dyn_cast<ConstantInt>((phiNode->getIncomingValue(i)));
+			BasicBlock *phiBlock = phiNode->getParent();
+			// get a false incoming block
+			if (CI->getValue() == 0) {
+				BasicBlock *falseBlock = phiNode->getIncomingBlock(i);
+				// next block from false branch - 2sd successor
+				for (BasicBlock::iterator iphiBlock = phiBlock->begin(), ephiBlock = phiBlock->end(); iphiBlock != ephiBlock; ++iphiBlock) {
+					if (BranchInst *bri = dyn_cast<BranchInst>(&*iphiBlock)) {
+						BasicBlock *exitBlock = bri->getSuccessor(1);
+						// create a direct edge from falseBlock to exitBlock
+						auto it_falseNode = bbMap.find(falseBlock);
+						auto it_exitNode = bbMap.find(exitBlock);
+						auto it_phiNode = bbMap.find(phiBlock);
+						if ((it_falseNode != bbMap.end()) && (it_exitNode != bbMap.end())) {
+						  unsigned falseNode = it_falseNode->second;
+						  unsigned phiNode = it_phiNode->second;
+							unsigned exitNode = it_exitNode->second;
+							// get edge from falseNode to phiNode
+							unsigned foundnode = -1u;
+							Edge* foundedge = getEdgeBetween(f, falseNode, phiNode, foundnode);
+							if (foundnode != -1u) {
+								//std::cout << "found node " << foundedge->dest << " with edge type " << foundedge->type << std::endl;
+								foundedge->dest = exitNode;
+							}
+						}
+					}
+				}
+			}
+			// get a true incoming block
+			else {
+				BasicBlock *trueBlock = phiNode->getIncomingBlock(i);
+				// next block from true branch - 1st successor
+				if (BranchInst *bri = dyn_cast<BranchInst>(&*instIt)) {
+					BasicBlock *exitBlock = bri->getSuccessor(0);
+				}
+			}
+		}
+	}
 }
 
 Func extractFunc(Function &F)
@@ -772,7 +831,7 @@ Func extractFunc(Function &F)
 	f.start = start;
 
 	/* fix PHI node */
-	fixPHINode(&F.getEntryBlock(), f, bbMap);
+	fixPHINode(F, f, bbMap);
 
 	return f;
 }
