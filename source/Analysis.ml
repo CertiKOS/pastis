@@ -1,5 +1,7 @@
 (* Quentin Carbonneaux - 2016 *)
 
+(* Van Chan Ngo, 2016 *)
+
 open Graph
 open Types
 open Polynom

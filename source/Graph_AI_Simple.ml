@@ -1,5 +1,7 @@
 (* Quentin Carbonneaux - 2016 *)
 
+(* Van Chan Ngo, 2016 *)
+
 (* Implementation of a simple abstract domain.
    The advantage is that the outcome is more
    predictible than what we obtain using more
