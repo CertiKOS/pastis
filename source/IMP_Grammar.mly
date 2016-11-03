@@ -25,11 +25,11 @@
 %left TADD TSUB
 %left TMUL
 
-%type <(Types.free_expr, IMP_Types.block) Types.func_ list> file
+%type <Types.id list * (Types.free_expr, IMP_Types.block) Types.func_ list> file
 %start file
 %%
 
-file: rfuncs TEOF { List.rev $1 }
+file: varopt rfuncs TEOF { (List.rev $1, List.rev $2) }
 
 ident: TIDENT { fst $1 }
 
@@ -70,7 +70,7 @@ exprrs:
   | rexprrs1    { List.rev $1 }
 
 rids1:
-    ident              { [$1] }
+  ident              { [$1] }
   | rids1 TCOMMA ident { $3 :: $1 }
 
 ids:
@@ -86,8 +86,10 @@ instr:
   | TIF logic TTHEN block TELSE block TEND { IIf ($2, b $3 $4 $5, b $5 $6 $7), $1 }
   | TWHILE logic TDO block TEND            { IWhile ($2, b $3 $4 $5), $1 }
   | TLOOP block TEND                       { ILoop (b $1 $2 $3), $1 }
-  | TLPAR ids TRPAR TEQ
-    ident TLPAR exprrs TRPAR TSEMI         { ICall ($2, $5, $7), $1 }
+  | TLPAR ids TRPAR TEQ ident TLPAR exprrs TRPAR TSEMI  { ICall ($2, $5, $7), $1 }
+  | ident TLPAR TRPAR TSEMI  {ISimpleCall $1, $2}
+
+
 
 rinstrs1:
     instr          { [$1] }
@@ -133,5 +135,5 @@ func:
   }
 
 rfuncs:
-    func        { [$1] }
+   func        { [$1] }
   | rfuncs func { $2 :: $1 }

@@ -87,8 +87,8 @@ let main () =
       try
       	(* CFG: if input file is in IMP *)
         if ends_with ".imp" !input_file then
-          let imp_file = IMP.parse_file !input_file in
-          List.map Graph.from_imp imp_file
+          let (lv, imp_file) = IMP.parse_file !input_file in
+          (lv, List.map Graph.from_imp imp_file)
         (* CFG: if input file is LLVM bitcode *)
         else if ends_with ".o" !input_file
              || ends_with ".bc" !input_file then
@@ -96,7 +96,7 @@ let main () =
           try
             let gfunc = Graph_Reader.read_func ic in
             let gfunc = Graph.add_loop_counter "z" gfunc in
-            [gfunc]
+            ([], [gfunc])
           with End_of_file ->
             match Unix.close_process_in ic with
             | Unix.WEXITED 0 -> failwith "llvm-reader should have failed"
@@ -123,16 +123,19 @@ let main () =
       match !main_func with
       | Some f -> f
       | None ->
-        if List.length g_file = 1
-        then (List.hd g_file).Types.fun_name
+        let (lv, lf) = g_file in
+        if List.length lf = 1
+        then (List.hd lf).Types.fun_name
         else "start"
     in
-    if not (List.exists (fun f -> f.Types.fun_name = fstart) g_file) then
+    let (lv, lf) = g_file in
+    if not (List.exists (fun f -> f.Types.fun_name = fstart) lf) then
       failarg (Printf.sprintf "cannot find function '%s' to analyze" fstart);
     (* do weakening if needed *)
     let g_file =
+      let (lv, lf) = g_file in
       if !no_weaken then g_file else
-      List.map Heuristics.add_weaken g_file
+      (lv, (List.map Heuristics.add_weaken lf))
     in
     (* instantiate an abstract interpreter *)
     let module AI = (val begin
@@ -142,15 +145,16 @@ let main () =
       end: Graph.AbsInt)
     in
     (* do abstract interpretation *)
-    let ai_results = AI.analyze ~dump:!dump_ai g_file fstart in
+    let ai_results = let (lv, lf) = g_file in AI.analyze ~dump:!dump_ai lf fstart in
     let query =
       let open Polynom in
         (Poly.of_monom (Monom.of_var "z") (+1.))
     in
     (* add focus functions if needed *)
     let g_file =
+      let (lv, lf) = g_file in
       if !no_focus then g_file else
-      List.map (Heuristics.add_focus ~deg:2 ai_results AI.get_nonneg) g_file
+      (lv, List.map (Heuristics.add_focus ~deg:2 ai_results AI.get_nonneg) lf)
     in
     (* apply the analysis *)
     let st_results = Analysis.run ai_results AI.is_nonneg g_file fstart query in

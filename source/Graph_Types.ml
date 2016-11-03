@@ -9,6 +9,7 @@ type action =
   | AGuard of logic
   | AAssign of id * expr
   | ACall of id list * id * expr list
+  | ASimpleCall of id
 
 type graph =
   { g_start: node

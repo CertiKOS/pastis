@@ -21,7 +21,7 @@ let stats =
  * the set of all edges from a node A is represented
  * by an element with index A in an array of (action * node) list
  *)
- 
+
 let from_imp impf =
 
   let h_position = Hashtbl.create 51 in
@@ -75,6 +75,10 @@ let from_imp impf =
     | IMP.ICall (idl, idf, el) ->
       let beg = new_node pos in
       new_edge beg (ACall (idl, idf, el)) fin;
+      beg
+    | IMP.ISimpleCall id ->
+      let beg = new_node pos in
+      new_edge beg (ASimpleCall id) fin;
       beg
 
   and goil fin loo = function

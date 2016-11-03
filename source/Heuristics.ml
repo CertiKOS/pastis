@@ -139,8 +139,10 @@ let add_weaken ({ fun_name; fun_body = g } as gfunc) =
       !nweaken - 1 + nnodes
   in
   let new_edges =
-    Array.mapi begin fun src ->
-      List.map begin function
+    Array.mapi
+    begin fun src ->
+      List.map
+      begin function
         | act, dst when is_guard act ->
           let d_edges = g.g_edges.(dst) in
           if d_edges = []
@@ -149,7 +151,8 @@ let add_weaken ({ fun_name; fun_body = g } as gfunc) =
           else (act, dst)
         | e -> e
       end
-    end g.g_edges
+    end
+    g.g_edges
   in
   let weaken = Array.of_list (List.rev !weaken) in
   let new_position =

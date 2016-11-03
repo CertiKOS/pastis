@@ -45,6 +45,7 @@ module Potential
   val constrain: annot -> order -> annot -> unit
   val rewrite: Poly.t list -> annot -> annot
   val solve_min: Poly.t list -> annot -> annot list -> Poly.t option
+  (*val exec_simplecall: ()*)
 end
 = struct
 
@@ -306,7 +307,8 @@ end
 
 end
 
-let run ai_results ai_is_nonneg fl start query =
+let run ai_results ai_is_nonneg g_file start query =
+  let (vl, fl) = g_file in
   reset_stats ();
 
   let f = List.find (fun f -> f.fun_name = start) fl in
@@ -342,6 +344,7 @@ let run ai_results ai_is_nonneg fl start query =
     | Graph.AGuard _ -> a
     | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) a
     | Graph.ACall _ -> Utils._TODO "calls"
+    | Graph.ASimpleCall _ -> Utils._TODO "simplecall"
   in
 
   (* Annotate all program points starting from

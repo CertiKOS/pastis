@@ -11,6 +11,7 @@ type instr =
   | IWhile of logic * block
   | ILoop of block
   | ICall of id list * id * expr list
+  | ISimpleCall of id
 
 and block =
   { b_start_p: position

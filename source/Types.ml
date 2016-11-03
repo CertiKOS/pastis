@@ -34,7 +34,7 @@ type ('a, 'b) func_ =
   ; fun_end_p: position
   }
 
-type ('a, 'b) program = ('a, 'b) func_ list
+type ('a, 'b) program = id list * ('a, 'b) func_ list
 
 type cmp = Le | Lt | Ge | Gt | Eq | Ne
 
@@ -46,4 +46,3 @@ type logic =
   | LAnd of logic * logic
   | LOr of logic * logic
   | LNot of logic
-

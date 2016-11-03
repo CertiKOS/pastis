@@ -120,6 +120,8 @@ module HyperGraph = struct
               (TAssign (id, peo)) ~pred:[|src|] ~succ:[|dst|];
           | ACall (_idl, _idf', _el) ->
             Utils._TODO "calls"
+          | ASimpleCall id ->
+            Utils._TODO "simplecall"
         end el;
       end f.fun_body.g_edges;
     end fl;
