@@ -270,7 +270,7 @@ module Solver = struct
         let ubs = List.map (bound false) ubs in
         List.rev_append lbs (List.rev_append ubs abs)
 
-    (* General polynomial assignment, the best we
+    (* General polynomial assignment, the best
        we can do is bound independently each monom
        by constants and aggregate the bounds.
     *)
@@ -285,12 +285,16 @@ module Solver = struct
     res
   *)
 
+  let apply_ASimpleCall abs id =
+    []
+
   let apply graph hedge tabs =
     let transfer = PSHGraph.attrhedge graph hedge in
     let res =
       match transfer with
       | TGuard disj -> apply_TGuard tabs.(0) disj
       | TAssign (id, pe) -> apply_TAssign tabs.(0) id pe
+      | TSimpleCall id -> apply_ASimpleCall tabs.(0) id
     in ((), res)
 
   let widening a b =
@@ -325,7 +329,9 @@ let debug_print fmt info graph res =
     | TAssign (v, None) ->
       Format.fprintf fmt "Assign %s = random" v
     | TAssign (v, Some pe) ->
-      Format.fprintf fmt "Assign %s = %a" v Poly.print_ascii pe;
+      Format.fprintf fmt "Assign %s = %a" v Poly.print_ascii pe
+    | TSimpleCall id ->
+      Format.fprintf fmt "Simple call %s" id
   in
   let print_hedge_attr fmt hedge transfer =
     Format.fprintf fmt "%a" print_transfer transfer
