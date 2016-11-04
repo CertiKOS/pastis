@@ -141,10 +141,11 @@ let main () =
       (lv, (List.map Heuristics.add_weaken lf))
     in
     (* instantiate an abstract interpreter *)
-    let module AI = (val begin
+    let module AI =
+      (val begin
         match !ai with
         | "apron" -> (module Graph.AbsInt.Apron)
-        | _       -> (module Graph.AbsInt.Simple)
+        | _   -> (module Graph.AbsInt.Simple)
       end: Graph.AbsInt)
     in
     (* do abstract interpretation *)

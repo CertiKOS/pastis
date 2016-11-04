@@ -60,6 +60,7 @@ end
 type transfer =
   | TGuard of L.sum DNF.t
   | TAssign of id * Poly.t option
+  | TSimpleCall of id
 
 module HyperGraph = struct
 
@@ -120,10 +121,11 @@ module HyperGraph = struct
             in
             PSHGraph.add_hedge g (new_edge ())
               (TAssign (id, peo)) ~pred:[|src|] ~succ:[|dst|];
+          | ASimpleCall id ->
+            PSHGraph.add_hedge g (new_edge ())
+              (TSimpleCall id) ~pred:[|src|] ~succ:[|dst|];
           | ACall (_idl, _idf', _el) ->
             Utils._TODO "AISimple_call"
-          | ASimpleCall id ->
-            Utils._TODO "AISimple_simplecall"
         end el;
       end f.fun_body.g_edges;
     end fl;
