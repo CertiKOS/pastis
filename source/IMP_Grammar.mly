@@ -30,7 +30,7 @@
 %start file
 %%
 
-file: varopt rfuncs TEOF { (List.rev $1, List.rev $2) }
+file: varopt rfuncs TEOF { ($1, List.rev $2) }
 
 ident: TIDENT { fst $1 }
 

@@ -345,8 +345,8 @@ let run ai_results ai_is_nonneg g_file start query =
     | Graph.AGuard LRandom -> dumps := a :: !dumps; a
     | Graph.AGuard _ -> a
     | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) a
-    | Graph.ACall _ -> Utils._TODO "calls"
-    | Graph.ASimpleCall _ -> Utils._TODO "simplecall"
+    | Graph.ACall _ -> Utils._TODO "analysis_call"
+    | Graph.ASimpleCall _ -> Utils._TODO "analysis_simplecall"
   in
 
   (* Annotate all program points starting from

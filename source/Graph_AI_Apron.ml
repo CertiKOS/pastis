@@ -192,6 +192,8 @@ module HyperGraph = struct
             let v = Apron.Var.of_string id in
             PSHGraph.add_hedge g (new_edge ())
               (TAssign (v, te)) ~pred:[|src|] ~succ:[|dst|];
+          | ASimpleCall id ->
+            Utils._TODO "AIApron_simplecall";
           | ACall (idl, idf', el) ->
             let f'i = Hashtbl.find info idf' in
             let f'start = f'i.fi_func.fun_body.g_start in

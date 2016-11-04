@@ -10,6 +10,7 @@
  * do analysis
  *)
 
+let debug_flag = ref false
 let input_file = ref ""
 let main_func = ref None
 let dump_ai = ref false
@@ -39,6 +40,8 @@ let argspec = Arg.align
     " Do not automatically add weakening points"
   ; "-no-focus", Arg.Set no_focus,
     " Do not automatically add focus functions"
+  ; "-debug", Arg.Set debug_flag,
+    " Display debug information"
   ]
 
 let annonarg s =

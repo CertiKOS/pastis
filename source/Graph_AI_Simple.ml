@@ -121,9 +121,9 @@ module HyperGraph = struct
             PSHGraph.add_hedge g (new_edge ())
               (TAssign (id, peo)) ~pred:[|src|] ~succ:[|dst|];
           | ACall (_idl, _idf', _el) ->
-            Utils._TODO "calls"
+            Utils._TODO "AISimple_call"
           | ASimpleCall id ->
-            Utils._TODO "simplecall"
+            Utils._TODO "AISimple_simplecall"
         end el;
       end f.fun_body.g_edges;
     end fl;
