@@ -1,11 +1,11 @@
 cd compiler; /Applications/Xcode.app/Contents/Developer/usr/bin/make install
-cp camlidl /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/bin
+cp camlidl /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/bin
 cd runtime; /Applications/Xcode.app/Contents/Developer/usr/bin/make install
-cp camlidlruntime.h /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/ocaml/caml/camlidlruntime.h
-cp libcamlidl.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/ocaml/libcamlidl.a
-cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/ocaml; ranlib libcamlidl.a
+cp camlidlruntime.h /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/ocaml/caml/camlidlruntime.h
+cp libcamlidl.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/ocaml/libcamlidl.a
+cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/ocaml; ranlib libcamlidl.a
 cd lib; /Applications/Xcode.app/Contents/Developer/usr/bin/make install
-cp com.cmi com.cma com.cmxa com.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/ocaml
-cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/ocaml; ranlib com.a
+cp com.cmi com.cma com.cmxa com.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/ocaml
+cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/ocaml; ranlib com.a
 cd tools; /Applications/Xcode.app/Contents/Developer/usr/bin/make install
 make[2]: Nothing to be done for `install'.

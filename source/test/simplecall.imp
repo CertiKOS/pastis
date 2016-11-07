@@ -1,12 +1,7 @@
-var g1, g2, n, z;
+var g1, n, z;
 
 function incr()  do
-  g2 = 0;
-  while g2 < n do
     g1 = g1 + 1;
-    g2 = g2 + 1;
-    z = z + 1;
-  end
 end
 
 function start() do

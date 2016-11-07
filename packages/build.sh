@@ -64,7 +64,7 @@ echo "    done"
 pack=$pack_clp
 echo "** Building $pack"
 cd $pack
-./configure --enable-static --prefix=$SANDBOX > configure.out 2> configure.err || fail configure
+./configure --with-lapack=no --enable-static --prefix=$SANDBOX > configure.out 2> configure.err || fail configure
 make > build.out 2> build.err             || fail build
 make install > install.out 2> install.err || fail install
 cd ..

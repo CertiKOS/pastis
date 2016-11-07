@@ -1,4 +1,4 @@
-prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
+prefix=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/coin
@@ -7,6 +7,6 @@ Name: CoinUtils
 Description: COIN-OR Utilities
 URL: https://projects.coin-or.org/CoinUtils
 Version: 2.9.12
-Libs: -L${libdir} -lCoinUtils -lbz2 -lz -lm 
+Libs: -L${libdir} -lCoinUtils -lbz2 -lz -lblas -lm 
 Cflags: -I${includedir}
 Requires: 

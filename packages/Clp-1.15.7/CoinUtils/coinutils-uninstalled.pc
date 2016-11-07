@@ -1,10 +1,10 @@
-prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
-libdir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/src
+prefix=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox
+libdir=/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/src
 
 Name: CoinUtils
 Description: COIN-OR Utilities
 URL: https://projects.coin-or.org/CoinUtils
 Version: 2.9.12
-Libs: ${libdir}/libCoinUtils.la -lbz2 -lz -lm 
-Cflags: -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/src -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/src
+Libs: ${libdir}/libCoinUtils.la -lbz2 -lz -lblas -lm 
+Cflags: -I/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/src -I/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/src
 Requires: 

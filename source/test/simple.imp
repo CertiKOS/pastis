@@ -1,11 +1,6 @@
 var g1, n, z;
 
-function incr1()  do
-  g1 = g1 + 1;
-end
-
 function start() do
-  g1 = 0;
   z = 0;
   while g1 < n do
     g1 = g1 + 1;

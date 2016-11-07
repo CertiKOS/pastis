@@ -1,10 +1,10 @@
-prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
-libdir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/src
+prefix=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox
+libdir=/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/src
 
 Name: CLP
 Description: COIN-OR Linear Programming Solver
 URL: https://projects.coin-or.org/Clp
 Version: 1.15.7
 Libs: ${libdir}/libClp.la 
-Cflags: -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/src -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/src
+Cflags: -I/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/src -I/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/src
 Requires: coinutils 

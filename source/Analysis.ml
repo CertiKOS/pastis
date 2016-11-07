@@ -322,14 +322,14 @@ let find_focus ai_results ai_is_nonneg focus f node  =
   stats.max_focus <- max (List.length res) stats.max_focus;
   res
 
-let get_dsf_infor g_file ai_results ai_is_nonneg dumps query id =
+let get_dsf_infor g_file  focus id =
   let (vl, fl) = g_file in
-  let callee = List.find (fun f -> f.fun_name = id) fl in
-  let focus = ([], Poly.const 1.) :: callee.fun_focus in
-  let body = callee.fun_body in
+  let f = List.find (fun f -> f.fun_name = id) fl in
+  let focus = List.append focus f.fun_focus in
+  let body = f.fun_body in
   let annot = Array.map (fun _ -> `Todo) body.Graph.g_position in
   let start_node = body.Graph.g_start in
-  (annot, ai_results, ai_is_nonneg, focus, id, dumps, body, query, start_node)
+  (annot, focus, id, body, start_node)
 
 (*
  * Annotate all program points starting from a given node.
@@ -339,11 +339,11 @@ let get_dsf_infor g_file ai_results ai_is_nonneg dumps query id =
  * allows to reduce the number of LP variables.
  *)
 
- let rec annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body query node =
+ let rec annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body final_annot node =
    match annot.(node) with
    | `Done a -> a
    | `Doing ->
-     let a = Potential.new_annot (monoms_from_query query focus) in
+     let a = Potential.new_annot (monoms_from_query ((Poly.of_monom (Monom.of_var "z") (+1.))) focus) in
      annot.(node) <- `Done a;
      a
    | `Todo ->
@@ -352,41 +352,41 @@ let get_dsf_infor g_file ai_results ai_is_nonneg dumps query id =
        match body.Graph.g_edges.(node) with
        | [] ->
         if node <> body.Graph.g_end then Utils._TODO "mmh?";
-        Potential.of_poly query
+        final_annot
        | (act, node') :: edges ->
         begin
-          let next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body query node' in
+          let next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body final_annot node' in
+          (*dumps := next_annot :: !dumps;*)
           let next_annot =
             match act with
             | Graph.AWeaken -> Potential.rewrite (find_focus ai_results ai_is_nonneg focus start node) next_annot
-            | Graph.AGuard LRandom -> dumps := next_annot :: !dumps; next_annot
-            | Graph.AGuard _ -> next_annot
+            | Graph.AGuard LRandom -> next_annot
+            | Graph.AGuard _ ->  next_annot
             | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) next_annot
             | Graph.ASimpleCall id ->
-              let (callee_annot, ai_results, ai_is_nonneg, callee_focus, callee_id, dumps, callee_body, query, callee_start_node) = get_dsf_infor g_file ai_results ai_is_nonneg dumps query id in
-              let callee_annot = annotate_dfs g_file callee_annot ai_results ai_is_nonneg callee_focus callee_id dumps callee_body query callee_start_node in
+              let (annot, focus, id, body, start_node) =  get_dsf_infor g_file  focus  id in
+              let callee_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus id dumps body next_annot start_node in
               dumps := callee_annot :: !dumps;
               callee_annot
             | Graph.ACall _ -> Utils._TODO "analysis_call"
           in
           List.fold_left
           begin fun next_annot (act, node') ->
-            let next_next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body query node' in
+            let next_next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body next_annot node' in
             let next_next_annot =
               match act with
               | Graph.AWeaken -> Potential.rewrite (find_focus ai_results ai_is_nonneg focus start node) next_next_annot
-              | Graph.AGuard LRandom -> dumps := next_annot :: !dumps; next_next_annot
+              | Graph.AGuard LRandom -> next_next_annot
               | Graph.AGuard _ -> next_next_annot
               | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) next_next_annot
               | Graph.ASimpleCall id ->
-                let (callee_annot, ai_results, ai_is_nonneg, callee_focus, callee_id, dumps, callee_body, query, callee_start_node) = get_dsf_infor g_file ai_results ai_is_nonneg dumps query id in
-                let callee_annot = annotate_dfs g_file callee_annot ai_results ai_is_nonneg callee_focus callee_id dumps callee_body query callee_start_node in
-                dumps := callee_annot :: !dumps;
-                callee_annot
+                  let (annot, focus, id, body, start_node) =  get_dsf_infor g_file  focus  id in
+                  let callee_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus id dumps body next_next_annot start_node in
+                  callee_annot
               | Graph.ACall _ -> Utils._TODO "analysis_call"
             in
             Potential.constrain next_annot Eq next_next_annot;
-            next_annot
+            next_next_annot
           end
           next_annot edges
         end
@@ -411,7 +411,8 @@ let run ai_results ai_is_nonneg g_file start query =
 
   let annot = Array.map (fun _ -> `Todo) body.Graph.g_position in
   let start_node = body.Graph.g_start in
-  let start_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body query start_node in
+  let final_annot = Potential.of_poly query in
+  let start_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body final_annot start_node in
   let pzero = Potential.of_poly (Poly.zero ()) in
   Potential.constrain start_annot Ge pzero; (* XXX we don't want this *)
   Potential.solve_min (find_focus ai_results ai_is_nonneg focus start start_node) start_annot !dumps

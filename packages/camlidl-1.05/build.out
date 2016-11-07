@@ -1,83 +1,8 @@
 cd compiler; /Applications/Xcode.app/Contents/Developer/usr/bin/make all
-rm -f config.ml
-sed -e 's|%%CPP%%|cpp|' \
-          config.mlp > config.ml
-chmod -w config.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c config.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c config.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c utils.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c utils.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c clflags.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c idltypes.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c prefix.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c prefix.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c lexpr.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c lexpr.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c cvttyp.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c cvttyp.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c variables.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c variables.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c array_.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c struct.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c struct.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c enum.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c enum.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c union.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c union.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c array.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c cvtval.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c cvtval.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c structdecl.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c structdecl.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c enumdecl.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c enumdecl.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c uniondecl.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c uniondecl.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c typedef.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c typedef.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c funct.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c funct.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c constdecl.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c constdecl.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c intf.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c intf.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c file.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c file.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c predef.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c predef.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamllex linenum.mll
-16 states, 331 transitions, table size 1420 bytes
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c linenum.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c linenum.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c parse_aux.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c parse_aux.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlyacc -v parser_midl.mly
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c parser_midl.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c parser_midl.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamllex lexer_midl.mll
-129 states, 1747 transitions, table size 7762 bytes
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c lexer_midl.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c lexer_midl.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c parse.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c parse.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c fixlabels.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c fixlabels.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c normalize.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c normalize.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c main.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -o camlidl config.cmo utils.cmo clflags.cmo prefix.cmo lexpr.cmo cvttyp.cmo variables.cmo array_.cmo struct.cmo enum.cmo union.cmo cvtval.cmo structdecl.cmo enumdecl.cmo uniondecl.cmo typedef.cmo funct.cmo constdecl.cmo intf.cmo file.cmo predef.cmo linenum.cmo parse_aux.cmo parser_midl.cmo lexer_midl.cmo parse.cmo fixlabels.cmo normalize.cmo main.cmo
+make[2]: Nothing to be done for `all'.
 cd runtime; /Applications/Xcode.app/Contents/Developer/usr/bin/make all
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -ccopt "-Wall -g" idlalloc.c
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -ccopt "-Wall -g" comintf.c
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -ccopt "-Wall -g" comerror.c
-rm -f libcamlidl.a
-ar rc libcamlidl.a idlalloc.o comintf.o comerror.o
-ranlib libcamlidl.a
+make[2]: Nothing to be done for `all'.
 cd lib; /Applications/Xcode.app/Contents/Developer/usr/bin/make all
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c com.mli
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -c com.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlc -g -a -o com.cma com.cmo
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlopt -c com.ml
-/Users/channgo/.opam/4.02.1/lib/ocaml/../../bin/ocamlopt -a -o com.cmxa com.cmx
+make[2]: Nothing to be done for `all'.
 cd tools; /Applications/Xcode.app/Contents/Developer/usr/bin/make all
 make[2]: Nothing to be done for `all'.
