@@ -1,0 +1,26 @@
+var N, i, z;
+
+function start() do
+
+  #assume N >= 0;
+
+  i = 0;
+  z = 0;
+  while i < N do
+    i = i + 1;
+    z = z + 2*i + 1;
+  end
+  #assume N >= 0; # polka does not get this one
+
+end
+
+function f1() do
+ 
+  z = 0;
+  while i < N do
+    i = i + 1;
+    z = z + 2;
+  end
+  #assume N >= 0;
+end
+ 
