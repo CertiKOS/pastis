@@ -309,6 +309,31 @@ end
 
 end
 
+(* get the set of monoms satisfying the query *)
+let monoms_from_query query focus =
+  let monoms = Poly.fold (fun m _ ms -> m :: ms) query [] in
+  let monoms_focus monoms (_, p) = Poly.fold (fun m _ ms -> m :: ms) p monoms in
+  List.fold_left monoms_focus monoms focus
+
+(* Find all the non-negative focus functions at a given program point. *)
+let find_focus ai_results ai_is_nonneg focus f node  =
+  let ai = Hashtbl.find ai_results f in
+  let ok (c, _) = List.for_all (ai_is_nonneg ai.(node)) c in
+  let res = List.map snd (List.filter ok focus) in
+  stats.max_focus <- max (List.length res) stats.max_focus;
+  res
+
+(* create a new annotation arcording to the action labeling graph edge *)
+let new_annot_from_action ai_results ai_is_nonneg focus start node dumps act a =
+  match act with
+  | Graph.AWeaken -> Potential.rewrite (find_focus ai_results ai_is_nonneg focus start node) a
+  | Graph.AGuard LRandom -> dumps := a :: !dumps; a
+  | Graph.AGuard _ -> a
+  | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) a
+  | Graph.ASimpleCall id -> a
+  | Graph.ACall _ -> Utils._TODO "analysis_call"
+
+(* run the analysis *)
 let run ai_results ai_is_nonneg g_file start query =
   let (vl, fl) = g_file in
   reset_stats ();
@@ -318,30 +343,12 @@ let run ai_results ai_is_nonneg g_file start query =
   let body = f.fun_body in
   let dumps = ref [] in
 
-  let monoms =
-    let monoms = Poly.fold (fun m _ ms -> m :: ms) query [] in
-    List.fold_left begin fun monoms (_, p) ->
-      Poly.fold (fun m _ ms -> m :: ms) p monoms
-    end monoms focus
-  in
-
-  (* Find all the non-negative focus functions at a
-     given program point.
-  *)
-  let find_focus f node =
-    let ai = Hashtbl.find ai_results f in
-    let ok (c, _) = List.for_all (ai_is_nonneg ai.(node)) c in
-    let res = List.map snd (List.filter ok focus) in
-    stats.max_focus <- max (List.length res) stats.max_focus;
-    res
-  in
-
   (* Create a new potential annotation resulting from
      executing one action (backwards).
   *)
   let do_action node act a =
     match act with
-    | Graph.AWeaken -> Potential.rewrite (find_focus start node) a
+    | Graph.AWeaken -> Potential.rewrite (find_focus ai_results ai_is_nonneg focus start node) a
     | Graph.AGuard LRandom -> dumps := a :: !dumps; a
     | Graph.AGuard _ -> a
     | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) a
@@ -362,7 +369,7 @@ let run ai_results ai_is_nonneg g_file start query =
     match annot.(node) with
     | `Done a -> a
     | `Doing ->
-      let a = Potential.new_annot monoms in
+      let a = Potential.new_annot (monoms_from_query query focus) in
       annot.(node) <- `Done a;
       a
     | `Todo ->
@@ -393,4 +400,4 @@ let run ai_results ai_is_nonneg g_file start query =
   let start_annot = dfs start_node in
   let pzero = Potential.of_poly (Poly.zero ()) in
   Potential.constrain start_annot Ge pzero; (* XXX we don't want this *)
-  Potential.solve_min (find_focus start start_node) start_annot !dumps
+  Potential.solve_min (find_focus ai_results ai_is_nonneg focus start start_node) start_annot !dumps
