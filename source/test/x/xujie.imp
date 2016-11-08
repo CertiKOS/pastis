@@ -1,0 +1,22 @@
+function xujie() do
+  var x, y, z;
+
+#  focus
+#    y, y+1,
+#    max0_ge_0(51-z),
+#    max0_ge_0(51-(z+1)),
+#    max0_le_arg(51-(z+1)),
+#    max0_ge_arg(51-z),
+#    max0_monotonic(51-z >= 51-(z+1));
+
+  z = 0;
+  while x > 0 or y > 0 do
+    if x > y then
+      x = x - 1;
+    else
+      y = y - 1;
+    end
+    z = z + 1;
+  end
+
+end

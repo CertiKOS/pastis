@@ -1,0 +1,27 @@
+function gopan() do
+  var y, z;
+
+  focus
+#    y, y+1,
+#    max0_ge_0(51-z),
+#    max0_ge_0(51-(z+1)),
+#    max0_le_arg(51-(z+1)),
+    max0_ge_arg(51-z),
+    max0_monotonic(51-z >= 51-(z+1));
+
+  y = 0;
+  z = 0;
+  loop
+    if z <= 50 then
+      y = y + 1;
+    else
+      y = y - 1;
+    end
+    if y <= 0 then
+      break;
+    end
+    z = z + 1;
+  end
+  #assume y >= 0;
+
+end

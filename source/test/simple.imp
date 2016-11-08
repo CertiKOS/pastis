@@ -1,9 +1,10 @@
-var g1, n, z;
+var g, n, z;
 
 function start() do
   z = 0;
-  while g1 < n do
-    g1 = g1 + 1;
+  g = 0;
+  while g < n do
+    g = g + 1;
     z = z + 1;
   end
 end

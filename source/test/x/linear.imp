@@ -1,0 +1,165 @@
+function median() do
+  var z, k, l;
+
+  focus
+    k,
+    k >= 1,
+    7-k,
+    7-l >= 0;
+
+  assume k >= 0 and k < 7;
+  k = 0;
+  z = 0;
+  while k < 7 do
+    k = k + 1;
+    l = 0;
+    while l < 7 - k do
+      l = l + 1;
+      z = z + 1;
+    end
+    z = z + 1;
+  end
+  assume k = 7;
+
+end
+
+function xy(x, y) do
+  var z;
+
+  focus
+    max0_ge_0(x+2*y+1),
+    max0_ge_arg(x+2*y+1),
+    max0_le_arg(x+2*y-1+1),
+    max0_le_arg(x+2*y-2+1);
+
+  while x+2*y > 0 do
+    if random then
+      x = x - 1;
+    else
+      y = y - 1;
+    end
+    z = z + 1;
+  end
+end
+
+
+function amortized(x) do
+  var z, s;
+  focus
+    max0_ge_arg(x),
+    max0_ge_0(x),
+    max0_le_arg(x-1),
+    s
+  ;
+
+  z = 0;
+  s = 0;
+  while x > 0 do
+    x = x - 1;
+    if random then
+      s = s + 1;
+    else
+      while s > 0 do
+        s = s - 1;
+        z = z + 1;
+      end
+    end
+    z = z + 1;
+  end
+
+end
+
+function inter(x, y) do
+  var z, k;
+  focus
+    max0_ge_arg(y-k),
+    max0_ge_0(y-k),
+    max0_le_arg(y-k-2)
+    ;
+
+  loop
+    k = k + 2;
+    z = z + 1;
+    if k >= y-1 then
+      break;
+    end
+  end
+
+end
+
+function swap(x, y) do
+  var z, t;
+
+  focus
+    max0_ge_0(x),
+    max0_ge_arg(x),
+    max0_le_arg(x-1),
+    max0_ge_0(y)
+    ;
+
+  z = 0;
+  while x > 0 do
+    x = x - 1;
+    t = x;
+    x = y;
+    y = t;
+    z = z + 1;
+  end
+
+end
+
+function loop2(x, y) do
+  var z;
+
+  focus
+    max0_ge_0(x),
+    max0_ge_arg(x),
+    max0_le_arg(x-1),
+    max0_ge_0(y),
+    max0_ge_arg(y),
+    max0_le_arg(y-1)
+    ;
+
+  z = 0;
+
+  while x > 0 do
+    x = x - 1;
+    while y > 0 do
+      y = y - 1;
+      z = z + 1;
+    end
+    z = z + 1;
+  end
+
+  while x > 0 do
+    x = x - 1;
+    z = z + 1;
+  end
+
+end
+
+function chain(x) do
+  var y, z;
+
+  focus
+    max0_ge_0(x),
+    max0_ge_arg(x),
+    max0_le_arg(x-1),
+    max0_sublinear(y+2 >= y),
+    max0_ge_0(y),
+    max0_ge_arg(y),
+    max0_le_arg(y-1),
+    max0_sublinear_mul(10, y)
+    ;
+
+  while x > 0 do
+    x = x - 1;
+    y = y + 2;
+  end
+  y = y * 10;
+  while y > 0 do
+    y = y - 1;
+    z = z + 1;
+  end
+
+end

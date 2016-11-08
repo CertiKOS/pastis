@@ -1,0 +1,153 @@
+
+# Simple size tracking on quadratic program.
+
+function start(x, z) do
+  focus
+  # those 6 are for the first loop
+    max0_le_arg(x - 1),
+    max0_ge_arg(x),
+    max0_ge_0(x),
+    binom_monotonic(2, max0_le_arg(x - 1)),
+    binom_monotonic(2, max0_ge_arg(x)),
+    binom_monotonic(2, max0_ge_0(x)),
+  # this one is for the second loop
+    x
+    ;
+
+  z = 5;
+
+  while x > 0 do
+    x = x - 1;
+    z = z + 2*x + 1;
+  end
+
+  x = z;
+  z = x - 42;
+
+  while x > 0 do
+    x = x - 1;
+    z = z + 2;
+  end
+
+end
+
+
+# The example that started the my new work
+# given to us by Tom Reps.
+
+function reps(x) do
+  var s, z;
+
+  focus s, x,
+
+    product(s, max0_ge_0(x)),
+    product(s, max0_ge_arg(x)),
+    product(s, max0_le_arg(x-1)),
+
+    product(x, max0_ge_0(x)),
+    product(x, max0_ge_arg(x)),
+    product(x-1, max0_le_arg(x-1)),
+
+    max0_ge_0(x),
+    binom_monotonic(2, max0_ge_0(x)),
+    binom_monotonic(3, max0_ge_0(x)),
+
+    max0_ge_arg(x),
+    binom_monotonic(2, max0_ge_arg(x)),
+    binom_monotonic(3, max0_ge_arg(x)),
+
+    max0_le_arg(x-1),
+    binom_monotonic(2, max0_le_arg(x-1)),
+    binom_monotonic(3, max0_le_arg(x-1))
+    ;
+
+  assume s >= 0;
+
+  while x > 0 do
+    x = x - 1;
+    z = z + s;
+    s = s + 2*x + 1;
+  end
+
+end
+
+
+# We can get both upper and lower bounds for
+# this one.
+
+function uplow(x) do
+  var z;
+
+  focus
+
+    # for lower bounds:
+    max0_monotonic(0 >= x),
+    max0_ge_0(x), max0_ge_arg(x-1), max0_le_arg(x),
+
+    # for upper bounds:
+    max0_ge_0(x), max0_ge_arg(x), max0_le_arg(x-1)
+    ;
+
+  while x > 0 do
+    x = x - 1;
+    if random then
+      z = z + 2;
+    else
+      z = z + 3;
+    end
+  end
+end
+
+function lowpoly(x) do
+  var z;
+  focus x, binom_monotonic(2, x), binom_monotonic(3, x),
+        -x, binom_monotonic(2, -x), binom_monotonic(3, -x);
+
+  assume x >= 0;
+  while x > 0 do
+    x = x - 1;
+    z = z + x*(x-2);
+  end
+end
+
+function unbounded() do
+  var z;
+  focus -z;
+
+  while true do
+    z = z + 1;
+  end
+
+  # the bound is 0 here, this is
+  # surprising, but sound, because
+  # soundness is guarded by:
+  #
+  #   for all paths starting from start
+  #   and going to the end
+  #
+  # (there are none here)
+
+end
+
+function sum(N) do
+  var i, j, z;
+
+  focus i,
+        0 >= N-i, binom_monotonic(2, 0 >= N-i),
+        product(N, N-i);
+
+  i = 0;
+  z = 0;
+  assume N >= 0;
+
+  while i < N do
+    z = z + 2*i + 1;
+    i = i + 1;
+  end
+
+  # assume N >= 0;   # polka does not get this one
+  # assume N-i >= 0; # oct does not get this one
+
+end
+
+function bug() do focus 2 >= 0, 1 >= 0; end

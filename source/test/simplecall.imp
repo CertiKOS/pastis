@@ -1,13 +1,25 @@
-var g1, n, z;
+var x,  z;
 
 function incr()  do
-    g1 = g1 + 1;
+#focus
+#  max0_ge_0(x),
+#  max0_ge_arg(x),
+#  max0_le_arg(x-1)
+#  ;
+
+    x = x - 1;
 end
 
 function start() do
-  g1 = 0;
+
+focus
+  max0_ge_0(x),
+  max0_ge_arg(x),
+  max0_le_arg(x-1)
+  ;
+
   z = 0;
-  while g1 < n do
+  while x > 0 do
     incr();
     z = z + 1;
   end

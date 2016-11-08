@@ -1,0 +1,32 @@
+function start(x) do
+  var z, y, a;
+
+  focus
+    max0_ge_0(x),
+    max0_ge_arg(x),
+    max0_le_arg(x-1),
+    binom_monotonic(2, max0_ge_0(x)),
+    binom_monotonic(2, max0_ge_arg(x)),
+    binom_monotonic(2, max0_le_arg(x-1)),
+    binom_monotonic(3, max0_ge_0(x)),
+    binom_monotonic(3, max0_ge_arg(x)),
+    binom_monotonic(3, max0_le_arg(x-1)),
+    binom_monotonic(2, y),
+    y, a;
+
+  while x > 0 do
+    x = x - 1;
+    y = x;
+    while y > 0 do
+      y = y - 1;
+      a = y;
+      while a > 0 do
+        a = a - 1;
+        z = z + 1;
+      end
+      weaken;
+    end
+    weaken;
+  end
+
+end

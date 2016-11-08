@@ -322,10 +322,13 @@ let find_focus ai_results ai_is_nonneg focus f node  =
   stats.max_focus <- max (List.length res) stats.max_focus;
   res
 
+(* need to apply the AI again with the new callee function to obtain ai_results and ai_is_nonneg *)
 let get_dsf_infor g_file  focus id =
   let (vl, fl) = g_file in
   let f = List.find (fun f -> f.fun_name = id) fl in
   let focus = List.append focus f.fun_focus in
+  (*let focus = ([], Poly.const 1.) :: f.fun_focus in*)
+  let _ = List.iter (fun (l, p) -> if l = [] then Format.eprintf "%a@." Poly.print_ascii p) focus in
   let body = f.fun_body in
   let annot = Array.map (fun _ -> `Todo) body.Graph.g_position in
   let start_node = body.Graph.g_start in
@@ -356,7 +359,6 @@ let get_dsf_infor g_file  focus id =
        | (act, node') :: edges ->
         begin
           let next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus start dumps body final_annot node' in
-          (*dumps := next_annot :: !dumps;*)
           let next_annot =
             match act with
             | Graph.AWeaken -> Potential.rewrite (find_focus ai_results ai_is_nonneg focus start node) next_annot
@@ -406,6 +408,7 @@ let run ai_results ai_is_nonneg g_file start query =
 
   let f = List.find (fun f -> f.fun_name = start) fl in
   let focus = ([], Poly.const 1.) :: f.fun_focus in
+  let _ = List.iter (fun (l, p) -> if l = [] then Format.eprintf "Initial focus: %a@." Poly.print_ascii p) focus in
   let body = f.fun_body in
   let dumps = ref [] in
 
