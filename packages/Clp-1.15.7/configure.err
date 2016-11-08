@@ -1,1 +1,5 @@
+configure: WARNING: Failed to find a Fortran compiler!
+./configure: line 16364: unavailable: command not found
+./configure: line 16535: unavailable: command not found
+configure: WARNING: Failed to find a Fortran compiler!
 configure: WARNING: No solver available, examples will not work.

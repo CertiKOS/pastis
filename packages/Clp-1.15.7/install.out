@@ -1,62 +1,62 @@
 Making install in Data/Sample
 make[3]: Nothing to be done for `install-exec-am'.
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Data/Sample/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample"
- /usr/local/bin/ginstall -c -m 644 'afiro.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/afiro.mps'
- /usr/local/bin/ginstall -c -m 644 'atm_5_10_1.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/atm_5_10_1.mps'
- /usr/local/bin/ginstall -c -m 644 'brandy.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/brandy.mps'
- /usr/local/bin/ginstall -c -m 644 'conic.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/conic.mps'
- /usr/local/bin/ginstall -c -m 644 'e226.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/e226.mps'
- /usr/local/bin/ginstall -c -m 644 'exmip1.5.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/exmip1.5.mps'
- /usr/local/bin/ginstall -c -m 644 'exmip1.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/exmip1.mps'
- /usr/local/bin/ginstall -c -m 644 'finnis.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/finnis.mps'
- /usr/local/bin/ginstall -c -m 644 'galenet.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/galenet.mps'
- /usr/local/bin/ginstall -c -m 644 'galenetbnds.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/galenetbnds.mps'
- /usr/local/bin/ginstall -c -m 644 'hello.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/hello.mps'
- /usr/local/bin/ginstall -c -m 644 'lseu.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/lseu.mps'
- /usr/local/bin/ginstall -c -m 644 'nw460.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/nw460.mps'
- /usr/local/bin/ginstall -c -m 644 'p0033.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/p0033.mps'
- /usr/local/bin/ginstall -c -m 644 'p0201.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/p0201.mps'
- /usr/local/bin/ginstall -c -m 644 'p0548.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/p0548.mps'
- /usr/local/bin/ginstall -c -m 644 'pack1.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/pack1.mps'
- /usr/local/bin/ginstall -c -m 644 'retail3.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/retail3.mps'
- /usr/local/bin/ginstall -c -m 644 'scOneInt.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/scOneInt.mps'
- /usr/local/bin/ginstall -c -m 644 'share2qp.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/share2qp.mps'
- /usr/local/bin/ginstall -c -m 644 'spec_sections.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/spec_sections.mps'
- /usr/local/bin/ginstall -c -m 644 'tp3.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/tp3.mps'
- /usr/local/bin/ginstall -c -m 644 'tp4.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/tp4.mps'
- /usr/local/bin/ginstall -c -m 644 'tp5.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/tp5.mps'
- /usr/local/bin/ginstall -c -m 644 'wedding_16.mps' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/wedding_16.mps'
- /usr/local/bin/ginstall -c -m 644 'exmip1.lp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/exmip1.lp'
- /usr/local/bin/ginstall -c -m 644 'atm_5_10_1.block' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/atm_5_10_1.block'
- /usr/local/bin/ginstall -c -m 644 'retail3.block' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/retail3.block'
- /usr/local/bin/ginstall -c -m 644 'wedding_16.block' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/wedding_16.block'
- /usr/local/bin/ginstall -c -m 644 'input.130' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/input.130'
- /usr/local/bin/ginstall -c -m 644 'app0110.cor' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110.cor'
- /usr/local/bin/ginstall -c -m 644 'app0110.stoch' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110.stoch'
- /usr/local/bin/ginstall -c -m 644 'app0110.time' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110.time'
- /usr/local/bin/ginstall -c -m 644 'app0110R.cor' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110R.cor'
- /usr/local/bin/ginstall -c -m 644 'app0110R.stoch' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110R.stoch'
- /usr/local/bin/ginstall -c -m 644 'app0110R.time' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110R.time'
- /usr/local/bin/ginstall -c -m 644 'bug.cor' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/bug.cor'
- /usr/local/bin/ginstall -c -m 644 'bug.stoch' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/bug.stoch'
- /usr/local/bin/ginstall -c -m 644 'bug.time' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/bug.time'
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Data/Sample/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig"
- /usr/local/bin/ginstall -c -m 644 'coindatasample.pc' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig/coindatasample.pc'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Data/Sample/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample"
+ /usr/local/bin/ginstall -c -m 644 'afiro.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/afiro.mps'
+ /usr/local/bin/ginstall -c -m 644 'atm_5_10_1.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/atm_5_10_1.mps'
+ /usr/local/bin/ginstall -c -m 644 'brandy.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/brandy.mps'
+ /usr/local/bin/ginstall -c -m 644 'conic.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/conic.mps'
+ /usr/local/bin/ginstall -c -m 644 'e226.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/e226.mps'
+ /usr/local/bin/ginstall -c -m 644 'exmip1.5.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/exmip1.5.mps'
+ /usr/local/bin/ginstall -c -m 644 'exmip1.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/exmip1.mps'
+ /usr/local/bin/ginstall -c -m 644 'finnis.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/finnis.mps'
+ /usr/local/bin/ginstall -c -m 644 'galenet.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/galenet.mps'
+ /usr/local/bin/ginstall -c -m 644 'galenetbnds.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/galenetbnds.mps'
+ /usr/local/bin/ginstall -c -m 644 'hello.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/hello.mps'
+ /usr/local/bin/ginstall -c -m 644 'lseu.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/lseu.mps'
+ /usr/local/bin/ginstall -c -m 644 'nw460.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/nw460.mps'
+ /usr/local/bin/ginstall -c -m 644 'p0033.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/p0033.mps'
+ /usr/local/bin/ginstall -c -m 644 'p0201.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/p0201.mps'
+ /usr/local/bin/ginstall -c -m 644 'p0548.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/p0548.mps'
+ /usr/local/bin/ginstall -c -m 644 'pack1.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/pack1.mps'
+ /usr/local/bin/ginstall -c -m 644 'retail3.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/retail3.mps'
+ /usr/local/bin/ginstall -c -m 644 'scOneInt.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/scOneInt.mps'
+ /usr/local/bin/ginstall -c -m 644 'share2qp.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/share2qp.mps'
+ /usr/local/bin/ginstall -c -m 644 'spec_sections.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/spec_sections.mps'
+ /usr/local/bin/ginstall -c -m 644 'tp3.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/tp3.mps'
+ /usr/local/bin/ginstall -c -m 644 'tp4.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/tp4.mps'
+ /usr/local/bin/ginstall -c -m 644 'tp5.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/tp5.mps'
+ /usr/local/bin/ginstall -c -m 644 'wedding_16.mps' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/wedding_16.mps'
+ /usr/local/bin/ginstall -c -m 644 'exmip1.lp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/exmip1.lp'
+ /usr/local/bin/ginstall -c -m 644 'atm_5_10_1.block' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/atm_5_10_1.block'
+ /usr/local/bin/ginstall -c -m 644 'retail3.block' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/retail3.block'
+ /usr/local/bin/ginstall -c -m 644 'wedding_16.block' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/wedding_16.block'
+ /usr/local/bin/ginstall -c -m 644 'input.130' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/input.130'
+ /usr/local/bin/ginstall -c -m 644 'app0110.cor' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110.cor'
+ /usr/local/bin/ginstall -c -m 644 'app0110.stoch' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110.stoch'
+ /usr/local/bin/ginstall -c -m 644 'app0110.time' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110.time'
+ /usr/local/bin/ginstall -c -m 644 'app0110R.cor' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110R.cor'
+ /usr/local/bin/ginstall -c -m 644 'app0110R.stoch' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110R.stoch'
+ /usr/local/bin/ginstall -c -m 644 'app0110R.time' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/app0110R.time'
+ /usr/local/bin/ginstall -c -m 644 'bug.cor' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/bug.cor'
+ /usr/local/bin/ginstall -c -m 644 'bug.stoch' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/bug.stoch'
+ /usr/local/bin/ginstall -c -m 644 'bug.time' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/Data/Sample/bug.time'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Data/Sample/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig"
+ /usr/local/bin/ginstall -c -m 644 'coindatasample.pc' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig/coindatasample.pc'
 Making install in CoinUtils
 Making install in src
-/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -c -m 644 config_coinutils.h /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinUtilsConfig.h
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib"
- /bin/sh ../../libtool --mode=install /usr/local/bin/ginstall -c  'libCoinUtils.la' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libCoinUtils.la'
-/usr/local/bin/ginstall -c .libs/libCoinUtils.3.9.12.dylib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libCoinUtils.3.9.12.dylib
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libCoinUtils.3.9.12.dylib libCoinUtils.3.dylib || { rm -f libCoinUtils.3.dylib && ln -s libCoinUtils.3.9.12.dylib libCoinUtils.3.dylib; }; })
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libCoinUtils.3.9.12.dylib libCoinUtils.dylib || { rm -f libCoinUtils.dylib && ln -s libCoinUtils.3.9.12.dylib libCoinUtils.dylib; }; })
-/usr/local/bin/ginstall -c .libs/libCoinUtils.lai /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libCoinUtils.la
-/usr/local/bin/ginstall -c .libs/libCoinUtils.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libCoinUtils.a
-chmod 644 /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libCoinUtils.a
-ranlib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libCoinUtils.a
+/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -c -m 644 config_coinutils.h /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinUtilsConfig.h
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib"
+ /bin/sh ../../libtool --mode=install /usr/local/bin/ginstall -c  'libCoinUtils.la' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libCoinUtils.la'
+/usr/local/bin/ginstall -c .libs/libCoinUtils.3.9.12.dylib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libCoinUtils.3.9.12.dylib
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libCoinUtils.3.9.12.dylib libCoinUtils.3.dylib || { rm -f libCoinUtils.3.dylib && ln -s libCoinUtils.3.9.12.dylib libCoinUtils.3.dylib; }; })
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libCoinUtils.3.9.12.dylib libCoinUtils.dylib || { rm -f libCoinUtils.dylib && ln -s libCoinUtils.3.9.12.dylib libCoinUtils.dylib; }; })
+/usr/local/bin/ginstall -c .libs/libCoinUtils.lai /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libCoinUtils.la
+/usr/local/bin/ginstall -c .libs/libCoinUtils.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libCoinUtils.a
+chmod 644 /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libCoinUtils.a
+ranlib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libCoinUtils.a
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib
+   /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -68,90 +68,90 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin"
- /usr/local/bin/ginstall -c -m 644 'Coin_C_defines.h' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/Coin_C_defines.h'
- /usr/local/bin/ginstall -c -m 644 'CoinAlloc.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinAlloc.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinBuild.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinBuild.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinDenseVector.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinDenseVector.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinDistance.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinDistance.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinError.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinError.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinFactorization.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinFactorization.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinSimpFactorization.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinSimpFactorization.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinDenseFactorization.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinDenseFactorization.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinOslFactorization.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinOslFactorization.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinFileIO.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinFileIO.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinFinite.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinFinite.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinFloatEqual.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinFloatEqual.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinHelperFunctions.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinHelperFunctions.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinIndexedVector.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinIndexedVector.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinLpIO.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinLpIO.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinMessage.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinMessage.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinMessageHandler.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinMessageHandler.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinModel.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinModel.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinStructuredModel.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinStructuredModel.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinModelUseful.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinModelUseful.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinMpsIO.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinMpsIO.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPackedMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPackedMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPackedVector.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPackedVector.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPackedVectorBase.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPackedVectorBase.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinParam.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinParam.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPragma.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPragma.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveDoubleton.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveDoubleton.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveDual.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveDual.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveDupcol.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveDupcol.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveEmpty.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveEmpty.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveFixed.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveFixed.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveForcing.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveForcing.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveImpliedFree.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveImpliedFree.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveIsolated.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveIsolated.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveMonitor.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveMonitor.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolvePsdebug.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolvePsdebug.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveSingleton.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveSingleton.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveSubst.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveSubst.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveTighten.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveTighten.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveTripleton.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveTripleton.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveUseless.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveUseless.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinPresolveZeros.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveZeros.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinSearchTree.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinSearchTree.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinShallowPackedVector.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinShallowPackedVector.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinSignal.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinSignal.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinSmartPtr.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinSmartPtr.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinSnapshot.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinSnapshot.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinSort.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinSort.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinTime.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinTime.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinTypes.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinTypes.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinUtility.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinUtility.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinWarmStart.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStart.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinWarmStartBasis.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartBasis.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinWarmStartVector.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartVector.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinWarmStartDual.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartDual.hpp'
- /usr/local/bin/ginstall -c -m 644 'CoinWarmStartPrimalDual.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartPrimalDual.hpp'
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils"
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin"
+ /usr/local/bin/ginstall -c -m 644 'Coin_C_defines.h' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/Coin_C_defines.h'
+ /usr/local/bin/ginstall -c -m 644 'CoinAlloc.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinAlloc.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinBuild.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinBuild.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinDenseVector.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinDenseVector.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinDistance.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinDistance.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinError.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinError.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinFactorization.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinFactorization.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinSimpFactorization.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinSimpFactorization.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinDenseFactorization.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinDenseFactorization.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinOslFactorization.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinOslFactorization.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinFileIO.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinFileIO.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinFinite.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinFinite.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinFloatEqual.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinFloatEqual.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinHelperFunctions.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinHelperFunctions.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinIndexedVector.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinIndexedVector.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinLpIO.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinLpIO.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinMessage.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinMessage.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinMessageHandler.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinMessageHandler.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinModel.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinModel.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinStructuredModel.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinStructuredModel.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinModelUseful.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinModelUseful.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinMpsIO.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinMpsIO.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPackedMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPackedMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPackedVector.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPackedVector.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPackedVectorBase.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPackedVectorBase.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinParam.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinParam.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPragma.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPragma.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveDoubleton.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveDoubleton.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveDual.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveDual.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveDupcol.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveDupcol.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveEmpty.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveEmpty.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveFixed.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveFixed.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveForcing.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveForcing.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveImpliedFree.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveImpliedFree.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveIsolated.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveIsolated.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveMonitor.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveMonitor.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolvePsdebug.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolvePsdebug.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveSingleton.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveSingleton.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveSubst.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveSubst.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveTighten.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveTighten.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveTripleton.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveTripleton.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveUseless.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveUseless.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinPresolveZeros.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinPresolveZeros.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinSearchTree.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinSearchTree.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinShallowPackedVector.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinShallowPackedVector.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinSignal.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinSignal.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinSmartPtr.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinSmartPtr.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinSnapshot.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinSnapshot.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinSort.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinSort.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinTime.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinTime.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinTypes.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinTypes.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinUtility.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinUtility.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinWarmStart.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStart.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinWarmStartBasis.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartBasis.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinWarmStartVector.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartVector.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinWarmStartDual.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartDual.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CoinWarmStartPrimalDual.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CoinWarmStartPrimalDual.hpp'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils"
 for file in README AUTHORS LICENSE; do \
 	  if test -f "$file"; then dir=; else dir="./"; fi; \
-	  if test -f "$dir$file"; then /usr/local/bin/ginstall -c -m 644 "$dir$file" "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils/$file"; fi; \
+	  if test -f "$dir$file"; then /usr/local/bin/ginstall -c -m 644 "$dir$file" "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils/$file"; fi; \
 	done
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig"
- /usr/local/bin/ginstall -c -m 644 'coinutils.pc' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig/coinutils.pc'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/CoinUtils/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig"
+ /usr/local/bin/ginstall -c -m 644 'coinutils.pc' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig/coinutils.pc'
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  install-data-hook
-PKG_CONFIG_PATH="/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig:" \
-	"pkg-config" --libs coinutils > /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils/coinutils_addlibs.txt
+PKG_CONFIG_PATH="/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig:" \
+	"pkg-config" --libs coinutils > /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/CoinUtils/coinutils_addlibs.txt
 Making install in Osi
 Making install in src/Osi
-/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -c -m 644 config_osi.h /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiConfig.h
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib"
- /bin/sh ../../../libtool --mode=install /usr/local/bin/ginstall -c  'libOsi.la' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsi.la'
-/usr/local/bin/ginstall -c .libs/libOsi.1.11.7.dylib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsi.1.11.7.dylib
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsi.1.11.7.dylib libOsi.1.dylib || { rm -f libOsi.1.dylib && ln -s libOsi.1.11.7.dylib libOsi.1.dylib; }; })
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsi.1.11.7.dylib libOsi.dylib || { rm -f libOsi.dylib && ln -s libOsi.1.11.7.dylib libOsi.dylib; }; })
-/usr/local/bin/ginstall -c .libs/libOsi.lai /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsi.la
-/usr/local/bin/ginstall -c .libs/libOsi.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsi.a
-chmod 644 /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsi.a
-ranlib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsi.a
+/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -c -m 644 config_osi.h /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiConfig.h
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib"
+ /bin/sh ../../../libtool --mode=install /usr/local/bin/ginstall -c  'libOsi.la' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsi.la'
+/usr/local/bin/ginstall -c .libs/libOsi.1.11.7.dylib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsi.1.11.7.dylib
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsi.1.11.7.dylib libOsi.1.dylib || { rm -f libOsi.1.dylib && ln -s libOsi.1.11.7.dylib libOsi.1.dylib; }; })
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsi.1.11.7.dylib libOsi.dylib || { rm -f libOsi.dylib && ln -s libOsi.1.11.7.dylib libOsi.dylib; }; })
+/usr/local/bin/ginstall -c .libs/libOsi.lai /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsi.la
+/usr/local/bin/ginstall -c .libs/libOsi.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsi.a
+chmod 644 /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsi.a
+ranlib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsi.a
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib
+   /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -163,33 +163,33 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin"
- /usr/local/bin/ginstall -c -m 644 'OsiAuxInfo.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiAuxInfo.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiBranchingObject.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiBranchingObject.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiChooseVariable.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiChooseVariable.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiColCut.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiColCut.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiCollections.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiCollections.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiCut.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiCut.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiCuts.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiCuts.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiPresolve.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiPresolve.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiRowCut.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiRowCut.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiRowCutDebugger.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiRowCutDebugger.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiSolverBranch.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiSolverBranch.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiSolverInterface.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiSolverInterface.hpp'
- /usr/local/bin/ginstall -c -m 644 'OsiSolverParameters.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiSolverParameters.hpp'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin"
+ /usr/local/bin/ginstall -c -m 644 'OsiAuxInfo.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiAuxInfo.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiBranchingObject.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiBranchingObject.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiChooseVariable.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiChooseVariable.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiColCut.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiColCut.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiCollections.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiCollections.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiCut.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiCut.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiCuts.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiCuts.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiPresolve.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiPresolve.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiRowCut.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiRowCut.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiRowCutDebugger.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiRowCutDebugger.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiSolverBranch.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiSolverBranch.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiSolverInterface.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiSolverInterface.hpp'
+ /usr/local/bin/ginstall -c -m 644 'OsiSolverParameters.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiSolverParameters.hpp'
 Making install in src/OsiCommonTest
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib"
- /bin/sh ../../../libtool --mode=install /usr/local/bin/ginstall -c  'libOsiCommonTests.la' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.la'
-/usr/local/bin/ginstall -c .libs/libOsiCommonTests.1.11.7.dylib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.1.11.7.dylib
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiCommonTests.1.11.7.dylib libOsiCommonTests.1.dylib || { rm -f libOsiCommonTests.1.dylib && ln -s libOsiCommonTests.1.11.7.dylib libOsiCommonTests.1.dylib; }; })
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiCommonTests.1.11.7.dylib libOsiCommonTests.dylib || { rm -f libOsiCommonTests.dylib && ln -s libOsiCommonTests.1.11.7.dylib libOsiCommonTests.dylib; }; })
-/usr/local/bin/ginstall -c .libs/libOsiCommonTests.lai /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.la
-/usr/local/bin/ginstall -c .libs/libOsiCommonTests.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.a
-chmod 644 /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.a
-ranlib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.a
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib"
+ /bin/sh ../../../libtool --mode=install /usr/local/bin/ginstall -c  'libOsiCommonTests.la' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.la'
+/usr/local/bin/ginstall -c .libs/libOsiCommonTests.1.11.7.dylib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.1.11.7.dylib
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiCommonTests.1.11.7.dylib libOsiCommonTests.1.dylib || { rm -f libOsiCommonTests.1.dylib && ln -s libOsiCommonTests.1.11.7.dylib libOsiCommonTests.1.dylib; }; })
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiCommonTests.1.11.7.dylib libOsiCommonTests.dylib || { rm -f libOsiCommonTests.dylib && ln -s libOsiCommonTests.1.11.7.dylib libOsiCommonTests.dylib; }; })
+/usr/local/bin/ginstall -c .libs/libOsiCommonTests.lai /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.la
+/usr/local/bin/ginstall -c .libs/libOsiCommonTests.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.a
+chmod 644 /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.a
+ranlib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiCommonTests.a
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib
+   /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -201,33 +201,33 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin"
- /usr/local/bin/ginstall -c -m 644 'OsiUnitTests.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiUnitTests.hpp'
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Osi" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Osi"
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin"
+ /usr/local/bin/ginstall -c -m 644 'OsiUnitTests.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiUnitTests.hpp'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Osi" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Osi"
 for file in README AUTHORS LICENSE; do \
 	  if test -f "$file"; then dir=; else dir="./"; fi; \
-	  if test -f "$dir$file"; then /usr/local/bin/ginstall -c -m 644 "$dir$file" "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Osi/$file"; fi; \
+	  if test -f "$dir$file"; then /usr/local/bin/ginstall -c -m 644 "$dir$file" "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Osi/$file"; fi; \
 	done
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig"
- /usr/local/bin/ginstall -c -m 644 'osi.pc' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig/osi.pc'
- /usr/local/bin/ginstall -c -m 644 'osi-unittests.pc' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig/osi-unittests.pc'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig"
+ /usr/local/bin/ginstall -c -m 644 'osi.pc' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig/osi.pc'
+ /usr/local/bin/ginstall -c -m 644 'osi-unittests.pc' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig/osi-unittests.pc'
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  install-data-hook
-PKG_CONFIG_PATH=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig: \
-	pkg-config --libs osi > /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Osi/osi_addlibs.txt
+PKG_CONFIG_PATH=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig: \
+	pkg-config --libs osi > /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Osi/osi_addlibs.txt
 Making install in Clp
 Making install in src
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib"
- /bin/sh ../../libtool --mode=install /usr/local/bin/ginstall -c  'libClp.la' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libClp.la'
-/usr/local/bin/ginstall -c .libs/libClp.1.12.7.dylib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libClp.1.12.7.dylib
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libClp.1.12.7.dylib libClp.1.dylib || { rm -f libClp.1.dylib && ln -s libClp.1.12.7.dylib libClp.1.dylib; }; })
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libClp.1.12.7.dylib libClp.dylib || { rm -f libClp.dylib && ln -s libClp.1.12.7.dylib libClp.dylib; }; })
-/usr/local/bin/ginstall -c .libs/libClp.lai /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libClp.la
-/usr/local/bin/ginstall -c .libs/libClp.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libClp.a
-chmod 644 /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libClp.a
-ranlib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libClp.a
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib"
+ /bin/sh ../../libtool --mode=install /usr/local/bin/ginstall -c  'libClp.la' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libClp.la'
+/usr/local/bin/ginstall -c .libs/libClp.1.12.7.dylib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libClp.1.12.7.dylib
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libClp.1.12.7.dylib libClp.1.dylib || { rm -f libClp.1.dylib && ln -s libClp.1.12.7.dylib libClp.1.dylib; }; })
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libClp.1.12.7.dylib libClp.dylib || { rm -f libClp.dylib && ln -s libClp.1.12.7.dylib libClp.dylib; }; })
+/usr/local/bin/ginstall -c .libs/libClp.lai /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libClp.la
+/usr/local/bin/ginstall -c .libs/libClp.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libClp.a
+chmod 644 /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libClp.a
+ranlib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libClp.a
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib
+   /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -239,69 +239,69 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/bin" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/bin"
-  /bin/sh ../../libtool --mode=install /usr/local/bin/ginstall -c 'clp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/bin/clp'
-/usr/local/bin/ginstall -c .libs/clp /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/bin/clp
-/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -c -m 644 config_clp.h /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpConfig.h
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/bin" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/bin"
+  /bin/sh ../../libtool --mode=install /usr/local/bin/ginstall -c 'clp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/bin/clp'
+/usr/local/bin/ginstall -c .libs/clp /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/bin/clp
+/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -c -m 644 config_clp.h /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpConfig.h
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  install-exec-hook
 make[5]: Nothing to be done for `install-exec-hook'.
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin"
- /usr/local/bin/ginstall -c -m 644 'Clp_C_Interface.h' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/Clp_C_Interface.h'
- /usr/local/bin/ginstall -c -m 644 'ClpCholeskyBase.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpCholeskyBase.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpCholeskyDense.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpCholeskyDense.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpConstraint.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpConstraint.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpConstraintLinear.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpConstraintLinear.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpConstraintQuadratic.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpConstraintQuadratic.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpDualRowDantzig.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpDualRowDantzig.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpDualRowPivot.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpDualRowPivot.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpDualRowSteepest.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpDualRowSteepest.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpDummyMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpDummyMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpDynamicExampleMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpDynamicExampleMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpDynamicMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpDynamicMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpEventHandler.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpEventHandler.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpFactorization.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpFactorization.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpGubDynamicMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpGubDynamicMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpGubMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpGubMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpInterior.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpInterior.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpLinearObjective.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpLinearObjective.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpMatrixBase.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpMatrixBase.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpMessage.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpMessage.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpModel.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpModel.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpNetworkMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpNetworkMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpNonLinearCost.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpNonLinearCost.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpNode.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpNode.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpObjective.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpObjective.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPackedMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPackedMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPdcoBase.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPdcoBase.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPlusMinusOneMatrix.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPlusMinusOneMatrix.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpParameters.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpParameters.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPresolve.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPresolve.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPrimalColumnDantzig.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPrimalColumnDantzig.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPrimalColumnPivot.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPrimalColumnPivot.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpPrimalColumnSteepest.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpPrimalColumnSteepest.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpQuadraticObjective.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpQuadraticObjective.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpSimplex.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpSimplex.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpSimplexNonlinear.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexNonlinear.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpSimplexOther.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexOther.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpSimplexDual.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexDual.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpSimplexPrimal.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexPrimal.hpp'
- /usr/local/bin/ginstall -c -m 644 'ClpSolve.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/ClpSolve.hpp'
- /usr/local/bin/ginstall -c -m 644 'CbcOrClpParam.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CbcOrClpParam.hpp'
- /usr/local/bin/ginstall -c -m 644 'Idiot.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/Idiot.hpp'
- /usr/local/bin/ginstall -c -m 644 'CbcOrClpParam.cpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/CbcOrClpParam.cpp'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin"
+ /usr/local/bin/ginstall -c -m 644 'Clp_C_Interface.h' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/Clp_C_Interface.h'
+ /usr/local/bin/ginstall -c -m 644 'ClpCholeskyBase.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpCholeskyBase.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpCholeskyDense.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpCholeskyDense.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpConstraint.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpConstraint.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpConstraintLinear.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpConstraintLinear.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpConstraintQuadratic.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpConstraintQuadratic.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpDualRowDantzig.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpDualRowDantzig.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpDualRowPivot.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpDualRowPivot.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpDualRowSteepest.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpDualRowSteepest.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpDummyMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpDummyMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpDynamicExampleMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpDynamicExampleMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpDynamicMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpDynamicMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpEventHandler.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpEventHandler.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpFactorization.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpFactorization.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpGubDynamicMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpGubDynamicMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpGubMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpGubMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpInterior.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpInterior.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpLinearObjective.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpLinearObjective.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpMatrixBase.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpMatrixBase.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpMessage.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpMessage.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpModel.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpModel.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpNetworkMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpNetworkMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpNonLinearCost.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpNonLinearCost.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpNode.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpNode.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpObjective.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpObjective.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPackedMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPackedMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPdcoBase.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPdcoBase.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPlusMinusOneMatrix.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPlusMinusOneMatrix.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpParameters.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpParameters.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPresolve.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPresolve.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPrimalColumnDantzig.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPrimalColumnDantzig.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPrimalColumnPivot.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPrimalColumnPivot.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpPrimalColumnSteepest.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpPrimalColumnSteepest.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpQuadraticObjective.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpQuadraticObjective.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpSimplex.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpSimplex.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpSimplexNonlinear.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexNonlinear.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpSimplexOther.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexOther.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpSimplexDual.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexDual.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpSimplexPrimal.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpSimplexPrimal.hpp'
+ /usr/local/bin/ginstall -c -m 644 'ClpSolve.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/ClpSolve.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CbcOrClpParam.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CbcOrClpParam.hpp'
+ /usr/local/bin/ginstall -c -m 644 'Idiot.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/Idiot.hpp'
+ /usr/local/bin/ginstall -c -m 644 'CbcOrClpParam.cpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/CbcOrClpParam.cpp'
 Making install in src/OsiClp
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib"
- /bin/sh ../../../libtool --mode=install /usr/local/bin/ginstall -c  'libOsiClp.la' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiClp.la'
-/usr/local/bin/ginstall -c .libs/libOsiClp.1.12.7.dylib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiClp.1.12.7.dylib
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiClp.1.12.7.dylib libOsiClp.1.dylib || { rm -f libOsiClp.1.dylib && ln -s libOsiClp.1.12.7.dylib libOsiClp.1.dylib; }; })
-(cd /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiClp.1.12.7.dylib libOsiClp.dylib || { rm -f libOsiClp.dylib && ln -s libOsiClp.1.12.7.dylib libOsiClp.dylib; }; })
-/usr/local/bin/ginstall -c .libs/libOsiClp.lai /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiClp.la
-/usr/local/bin/ginstall -c .libs/libOsiClp.a /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiClp.a
-chmod 644 /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiClp.a
-ranlib /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/libOsiClp.a
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib"
+ /bin/sh ../../../libtool --mode=install /usr/local/bin/ginstall -c  'libOsiClp.la' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiClp.la'
+/usr/local/bin/ginstall -c .libs/libOsiClp.1.12.7.dylib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiClp.1.12.7.dylib
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiClp.1.12.7.dylib libOsiClp.1.dylib || { rm -f libOsiClp.1.dylib && ln -s libOsiClp.1.12.7.dylib libOsiClp.1.dylib; }; })
+(cd /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib && { ln -s -f libOsiClp.1.12.7.dylib libOsiClp.dylib || { rm -f libOsiClp.dylib && ln -s libOsiClp.1.12.7.dylib libOsiClp.dylib; }; })
+/usr/local/bin/ginstall -c .libs/libOsiClp.lai /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiClp.la
+/usr/local/bin/ginstall -c .libs/libOsiClp.a /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiClp.a
+chmod 644 /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiClp.a
+ranlib /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/libOsiClp.a
 ----------------------------------------------------------------------
 Libraries have been installed in:
-   /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib
+   /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib
 
 If you ever happen to want to link against installed libraries
 in a given directory, LIBDIR, you must either use libtool, and
@@ -313,18 +313,18 @@ flag during linking and do at least one of the following:
 See any operating system documentation about shared libraries for
 more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin"
- /usr/local/bin/ginstall -c -m 644 'OsiClpSolverInterface.hpp' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/include/coin/OsiClpSolverInterface.hpp'
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Clp" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Clp"
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin"
+ /usr/local/bin/ginstall -c -m 644 'OsiClpSolverInterface.hpp' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/include/coin/OsiClpSolverInterface.hpp'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Clp" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Clp"
 for file in README AUTHORS LICENSE; do \
 	  if test -f "$file"; then dir=; else dir="./"; fi; \
-	  if test -f "$dir$file"; then /usr/local/bin/ginstall -c -m 644 "$dir$file" "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Clp/$file"; fi; \
+	  if test -f "$dir$file"; then /usr/local/bin/ginstall -c -m 644 "$dir$file" "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Clp/$file"; fi; \
 	done
-test -z "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig"
- /usr/local/bin/ginstall -c -m 644 'clp.pc' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig/clp.pc'
- /usr/local/bin/ginstall -c -m 644 'osi-clp.pc' '/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig/osi-clp.pc'
+test -z "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig" || /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Clp/install-sh -d "/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig"
+ /usr/local/bin/ginstall -c -m 644 'clp.pc' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig/clp.pc'
+ /usr/local/bin/ginstall -c -m 644 'osi-clp.pc' '/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig/osi-clp.pc'
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  install-data-hook
-PKG_CONFIG_PATH=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig: \
-	pkg-config --libs clp > /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/coin/doc/Clp/clp_addlibs.txt
+PKG_CONFIG_PATH=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig: \
+	pkg-config --libs clp > /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/coin/doc/Clp/clp_addlibs.txt
 make[3]: Nothing to be done for `install-exec-am'.
 make[3]: Nothing to be done for `install-data-am'.

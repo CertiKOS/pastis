@@ -1,4 +1,4 @@
-datadir=/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Data/Sample
+datadir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Data/Sample
 
 Name: Sample
 Description: Sample models

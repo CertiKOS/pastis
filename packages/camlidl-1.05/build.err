@@ -1,0 +1,244 @@
+File "utils.ml", line 51, characters 15-28:
+Warning 3: deprecated: String.create
+Use Bytes.create instead.
+File "lexpr.ml", line 268, characters 10-16:
+Warning 26: unused variable trail'.
+File "constdecl.ml", line 36, characters 4-24:
+Warning 26: unused variable ty.
+File "intf.ml", line 312, characters 12-16:
+Warning 26: unused variable outs.
+File "intf.ml", line 312, characters 7-10:
+Warning 26: unused variable ins.
+File "parse_aux.ml", line 167, characters 23-54:
+Warning 23: all the fields are explicitly listed in this record:
+the 'with' clause is useless.
+File "parse_aux.ml", line 169, characters 42-74:
+Warning 23: all the fields are explicitly listed in this record:
+the 'with' clause is useless.
+File "parse_aux.ml", line 171, characters 22-47:
+Warning 23: all the fields are explicitly listed in this record:
+the 'with' clause is useless.
+12 shift/reduce conflicts.
+comintf.c:250:7: warning: variable 'u1' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:257:25: note: uninitialized use occurs here
+  GUID_val(res).Data1 = u1;
+                        ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:9: note: initialize the variable 'u1' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+        ^
+         = 0
+comintf.c:250:7: warning: variable 'u2' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:258:25: note: uninitialized use occurs here
+  GUID_val(res).Data2 = u2;
+                        ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:13: note: initialize the variable 'u2' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+            ^
+             = 0
+comintf.c:250:7: warning: variable 'u3' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:259:25: note: uninitialized use occurs here
+  GUID_val(res).Data3 = u3;
+                        ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:17: note: initialize the variable 'u3' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                ^
+                 = 0
+comintf.c:250:7: warning: variable 'u4' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:260:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[0] = u4;
+                           ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:21: note: initialize the variable 'u4' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                    ^
+                     = 0
+comintf.c:250:7: warning: variable 'u5' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:261:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[1] = u5;
+                           ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:25: note: initialize the variable 'u5' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                        ^
+                         = 0
+comintf.c:250:7: warning: variable 'u6' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:262:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[2] = u6;
+                           ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:29: note: initialize the variable 'u6' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                            ^
+                             = 0
+comintf.c:250:7: warning: variable 'u7' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:263:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[3] = u7;
+                           ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:33: note: initialize the variable 'u7' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                                ^
+                                 = 0
+comintf.c:250:7: warning: variable 'u8' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:264:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[4] = u8;
+                           ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:37: note: initialize the variable 'u8' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                                    ^
+                                     = 0
+comintf.c:250:7: warning: variable 'u9' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:265:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[5] = u9;
+                           ^~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:41: note: initialize the variable 'u9' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                                        ^
+                                         = 0
+comintf.c:250:7: warning: variable 'u10' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:266:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[6] = u10;
+                           ^~~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:46: note: initialize the variable 'u10' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                                             ^
+                                              = 0
+comintf.c:250:7: warning: variable 'u11' is used uninitialized whenever '||' condition is true [-Wsometimes-uninitialized]
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:267:28: note: uninitialized use occurs here
+  GUID_val(res).Data4[7] = u11;
+                           ^~~
+comintf.c:250:7: note: remove the '||' if its condition is always false
+  if (string_length(str) != 36 ||
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:284:23: note: expanded from macro 'string_length'
+#define string_length caml_string_length
+                      ^
+comintf.c:248:51: note: initialize the variable 'u11' to silence this warning
+  int u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11;
+                                                  ^
+                                                   = 0
+11 warnings generated.
+comerror.c:52:8: warning: unused variable 'msg' [-Wunused-variable]
+  char msg[1024];
+       ^
+comerror.c:171:16: warning: implicit declaration of function 'caml_format_exception' is invalid in C99 [-Wimplicit-function-declaration]
+  char * msg = format_caml_exception(exn_bucket);
+               ^
+/Users/channgo/.opam/4.02.1/lib/ocaml/caml/compatibility.h:249:31: note: expanded from macro 'format_caml_exception'
+#define format_caml_exception caml_format_exception /*SP*/
+                              ^
+comerror.c:171:10: warning: incompatible integer to pointer conversion initializing 'char *' with an expression of type 'int' [-Wint-conversion]
+  char * msg = format_caml_exception(exn_bucket);
+         ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.

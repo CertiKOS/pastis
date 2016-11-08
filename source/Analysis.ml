@@ -323,7 +323,7 @@ let find_focus ai_results ai_is_nonneg focus f node  =
   res
 
 (* annotation of simple function call *)
-let exec_simplecall g_file  ai_results ai_is_nonneg focus fname  final_annot  dumps annote_function =
+let exec_simplecall g_file  ai_results ai_is_nonneg focus fname final_annot dumps annote_function =
   let (vl, fl) = g_file in
   let f = List.find (fun f -> f.fun_name = fname) fl in
   let focus = List.append focus f.fun_focus in
@@ -335,14 +335,14 @@ let exec_simplecall g_file  ai_results ai_is_nonneg focus fname  final_annot  du
     let start_node = body.Graph.g_start in
     annote_function g_file annot ai_results ai_is_nonneg focus fname body final_annot start_node dumps
 
-(* annoation for act *)
+(* annotation for act *)
 let annotate_act g_file ai_results ai_is_nonneg focus f body final_annot node dumps annote_function act =
   match act with
   | Graph.AWeaken -> Potential.rewrite (find_focus ai_results ai_is_nonneg focus f node) final_annot
   | Graph.AGuard LRandom -> final_annot
   | Graph.AGuard _ ->  final_annot
   | Graph.AAssign (v, e) -> Potential.exec_assignment (v, e) final_annot
-  | Graph.ASimpleCall id -> let callee_annot = exec_simplecall g_file  ai_results ai_is_nonneg focus id  final_annot  dumps annote_function in
+  | Graph.ASimpleCall id -> let callee_annot = exec_simplecall g_file ai_results ai_is_nonneg focus id final_annot dumps annote_function in
     dumps := callee_annot :: !dumps;
     callee_annot
   | Graph.ACall _ -> Utils._TODO "analysis_call"
@@ -371,11 +371,11 @@ let annotate_act g_file ai_results ai_is_nonneg focus f body final_annot node du
         final_annot
        | (act, node') :: edges ->
         begin
-          let next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus f  body final_annot node' dumps in
+          let next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus f body final_annot node' dumps in
           let next_annot = annotate_act g_file ai_results ai_is_nonneg focus f body next_annot node dumps annotate_dfs act in
           List.fold_left
           begin fun next_annot (act, node') ->
-            let next_next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus f  body next_annot node' dumps in
+            let next_next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus f body next_annot node' dumps in
             let next_next_annot = annotate_act g_file ai_results ai_is_nonneg focus f body next_next_annot node dumps annotate_dfs act in
             Potential.constrain next_annot Eq next_next_annot;
             next_next_annot

@@ -72,7 +72,7 @@ CXXFLAGS = -O3 -pipe -DNDEBUG -Wparentheses -Wreturn-type -Wcast-qual -Wall -Wpo
 # Sample data directory
 ifeq ($(COIN_HAS_SAMPLE), TRUE)
   ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
-    CXXFLAGS += -DSAMPLEDIR=\"`PKG_CONFIG_PATH=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --variable=datadir coindatasample`\"
+    CXXFLAGS += -DSAMPLEDIR=\"`PKG_CONFIG_PATH=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --variable=datadir coindatasample`\"
   else
     CXXFLAGS += -DSAMPLEDIR=\"\"
   endif
@@ -81,7 +81,7 @@ endif
 # Netlib data directory
 ifeq ($(COIN_HAS_NETLIB), TRUE)
   ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
-    CXXFLAGS += -DNETLIBDIR=\"`PKG_CONFIG_PATH=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --variable=datadir coindatanetlib`\"
+    CXXFLAGS += -DNETLIBDIR=\"`PKG_CONFIG_PATH=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --variable=datadir coindatanetlib`\"
   else
     CXXFLAGS += -DNETLIBDIR=\"\"
   endif
@@ -92,7 +92,7 @@ CXXLINKFLAGS =
 
 # Include directories (we use the CYGPATH_W variables to allow compilation with Windows compilers)
 ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
-  INCL = `PKG_CONFIG_PATH=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --cflags  osi`
+  INCL = `PKG_CONFIG_PATH=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --cflags  osi`
 else
   INCL = 
 endif
@@ -100,12 +100,12 @@ INCL += $(ADDINCFLAGS)
 
 # Linker flags
 ifeq ($(COIN_HAS_PKGCONFIG), TRUE)
-  LIBS = `PKG_CONFIG_PATH=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --libs  osi`
+  LIBS = `PKG_CONFIG_PATH=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib64/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib/pkgconfig:/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/share/pkgconfig: pkg-config --libs  osi`
 else
   ifeq ($(COIN_CXX_IS_CL), TRUE)
-    LIBS = -link -libpath:`$(CYGPATH_W) /Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib` libOsi.lib  
+    LIBS = -link -libpath:`$(CYGPATH_W) /Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib` libOsi.lib  
   else
-    LIBS = -L/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox/lib -lOsi  
+    LIBS = -L/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox/lib -lOsi  
   endif
 endif
 

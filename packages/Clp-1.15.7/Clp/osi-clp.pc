@@ -1,4 +1,4 @@
-prefix=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox
+prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/coin

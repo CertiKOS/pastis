@@ -1,10 +1,10 @@
-prefix=/Users/channgo/Working/c4b-new/modif/pasta/packages/sandbox
-libdir=/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/src/Osi
+prefix=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/sandbox
+libdir=/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/src/Osi
 
 Name: Osi
 Description: COIN-OR Open Solver Interface
 URL: https://projects.coin-or.org/Osi
 Version: 0.106.7
 Libs: ${libdir}/libOsi.la 
-Cflags: -I/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/src/Osi -I/Users/channgo/Working/c4b-new/modif/pasta/packages/Clp-1.15.7/Osi/src/Osi
+Cflags: -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/src/Osi -I/Users/channgo/Working/c4b/C4B-new/modif/pasta/packages/Clp-1.15.7/Osi/src/Osi
 Requires: coinutils 
