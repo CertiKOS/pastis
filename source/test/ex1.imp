@@ -1,0 +1,14 @@
+var x, z, m, n;
+
+function start() do
+
+  x = 0;
+  z = 0;
+  while x < n do
+    x = x + 1;
+    if x < m then
+      x = m;
+    end
+    z = z + 1;
+  end
+end

@@ -1,13 +1,7 @@
 var x,  z;
 
-function incr()  do
-#focus
-#  max0_ge_0(x),
-#  max0_ge_arg(x),
-#  max0_le_arg(x-1)
-#  ;
-
-    x = x - 1;
+function decr()  do
+  x = x - 1;
 end
 
 function start() do
@@ -20,7 +14,7 @@ focus
 
   z = 0;
   while x > 0 do
-    incr();
+    decr();
     z = z + 1;
   end
 end
