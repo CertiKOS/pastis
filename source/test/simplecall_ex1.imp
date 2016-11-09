@@ -7,12 +7,11 @@ focus
   max0_ge_arg(x),
   max0_le_arg(x-1),
   max0_ge_0(y),
-  max0_ge_0(y+1),
+  max0_ge_arg(y+1),
   max0_ge_0(n),
   max0_ge_0(n-y),
   max0_le_arg(n-y-1)
   ;
-
   y = 0;
   while y < n do
     y = y + 1;
@@ -28,7 +27,7 @@ focus
   max0_ge_arg(x),
   max0_le_arg(x-1),
   max0_ge_0(y),
-  max0_ge_0(y+1),
+  max0_ge_arg(y+1),
   max0_ge_0(n),
   max0_ge_0(n-y),
   max0_le_arg(n-y-1)
@@ -39,7 +38,6 @@ assume n > 0;
   z = 0;
   while x > 0 do
     nested_loop();
-    z = z + 1;
   end
 end
 
@@ -55,7 +53,6 @@ assume n > 0;
       x = x - 1;
       z = z + 1;
     end
-    z = z + 1;
   end
 end
 
