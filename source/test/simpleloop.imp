@@ -1,13 +1,13 @@
-var x, n, z;
-
-function start() do
-
-assume n > 0;
+function start() do  
+  var x, y, n, z;
 
   z = 0;
-  x = 0;
-  while x < n do
-    x = x + 1;
-    z = z + 1;
+  while x > 0 do
+    y = 0;
+    while y < n do
+      y = y + 1;
+      x = x - 1;
+      z = z + 1;
+    end
   end
 end

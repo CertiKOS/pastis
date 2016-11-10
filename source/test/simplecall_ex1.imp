@@ -10,10 +10,14 @@ focus
   max0_ge_arg(y+1),
   max0_ge_0(n),
   max0_ge_0(n-y),
-  max0_le_arg(n-y-1)
+  max0_le_arg(n-y-1),
+  max0_sublinear_mul(n,x),
+  n, x
   ;
+
+  assume n > 0;
   y = 0;
-  while y < n do
+  while y < n and x > 0 do
     y = y + 1;
     x = x - 1;
     z = z + 1;
@@ -30,10 +34,12 @@ focus
   max0_ge_arg(y+1),
   max0_ge_0(n),
   max0_ge_0(n-y),
-  max0_le_arg(n-y-1)
+  max0_le_arg(n-y-1),
+  max0_sublinear_mul(n,x),
+  n, x
   ;
 
-assume n > 0;
+  assume n > 0;
 
   z = 0;
   while x > 0 do
@@ -43,14 +49,12 @@ end
 
 function simple() do
 
-assume n > 0;
-
   z = 0;
   while x > 0 do
-    y = 0;
-    while y < n do
-      y = y + 1;
-      x = x - 1;
+    x = x - 1;
+    y = x;
+    while y > 0 do
+      y = y - 1;
       z = z + 1;
     end
   end

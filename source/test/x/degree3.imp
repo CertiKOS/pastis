@@ -1,19 +1,20 @@
 function start(x) do
   var z, y, a;
 
-  focus
-    max0_ge_0(x),
-    max0_ge_arg(x),
-    max0_le_arg(x-1),
-    binom_monotonic(2, max0_ge_0(x)),
-    binom_monotonic(2, max0_ge_arg(x)),
-    binom_monotonic(2, max0_le_arg(x-1)),
-    binom_monotonic(3, max0_ge_0(x)),
-    binom_monotonic(3, max0_ge_arg(x)),
-    binom_monotonic(3, max0_le_arg(x-1)),
-    binom_monotonic(2, y),
-    y, a;
+  #focus
+  #  max0_ge_0(x),
+  #  max0_ge_arg(x),
+  #  max0_le_arg(x-1),
+  #  binom_monotonic(2,max0_ge_0(x)),
+  #  binom_monotonic(2,max0_ge_arg(x)),
+  #  binom_monotonic(2,max0_le_arg(x-1)),
+  #  binom_monotonic(3,max0_ge_0(x)),
+  #  binom_monotonic(3,max0_ge_arg(x)),
+  #  binom_monotonic(3,max0_le_arg(x-1)),
+  #  binom_monotonic(2,y),
+  #  y, a;
 
+  z = 0;
   while x > 0 do
     x = x - 1;
     y = x;

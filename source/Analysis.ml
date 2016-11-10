@@ -372,6 +372,7 @@ let annotate_act g_file ai_results ai_is_nonneg focus f body final_annot node du
        | (act, node') :: edges ->
         begin
           let next_annot = annotate_dfs g_file annot ai_results ai_is_nonneg focus f body final_annot node' dumps in
+          dumps := next_annot :: !dumps;
           let next_annot = annotate_act g_file ai_results ai_is_nonneg focus f body next_annot node dumps annotate_dfs act in
           List.fold_left
           begin fun next_annot (act, node') ->
