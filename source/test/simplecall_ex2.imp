@@ -1,0 +1,42 @@
+var x, y, z;
+
+function nested_loop() do
+  while y > 0 do
+    y = y - 1;
+    z = z + 1;
+    end
+end
+
+function start() do
+
+  z = 0;
+  while x > 0 do
+    x = x - 1;
+    y = x;
+    nested_loop();
+  end
+end
+
+function simple() do
+
+  while x > 0 do
+    x = x - 1;
+    y = x;
+    while y > 0 do
+      y = y - 1;
+      z = z + 1;
+    end
+  end
+end
+
+function simple1() do
+
+  #assume y > 5;
+
+  z = 0;
+  y = 7;
+  while x > 0 do
+    x = x - y;
+    z = z + 1;
+  end
+end
