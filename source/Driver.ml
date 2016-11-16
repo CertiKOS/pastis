@@ -10,6 +10,8 @@
  * do analysis
  *)
 
+open Environment
+
 let debug_flag = ref false
 let input_file = ref ""
 let main_func = ref None
