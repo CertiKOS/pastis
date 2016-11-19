@@ -16,7 +16,7 @@ let idpostfix = ref (-1)
 (* new identifier generation *)
 let newid fname varname =
   idpostfix := !idpostfix + 1; 
-  varname ^ "_" fname "_" ^ (string_of_int (!idpostfix))
+  varname ^ "_" ^ fname ^ "_" ^ (string_of_int (!idpostfix))
 
 
 (* scope hierarchy: it maps function f to a set of functions which are outer scopes of f *)
