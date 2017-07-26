@@ -1,6 +1,8 @@
 (* Quentin Carbonneaux - 2016-2017 *)
 (* Van Chan Ngo - 2017 *)
 
+open CS_Interop
+
 let input_file = ref ""
 let main_func = ref None
 let dump_ai = ref false

@@ -1,4 +1,4 @@
 <lib>: include
 <Graph_AI_Apron.ml>: use_apron
 <Clp_Stubs.c> or <Clp.ml>: use_clp
-<Driver.{native,byte,d.byte}>: use_apron, use_unix, use_clp
+<Driver.{native,byte,d.byte}>: use_unix, use_clp
