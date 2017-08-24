@@ -1,8 +1,6 @@
 (* Quentin Carbonneaux - 2016-2017 *)
 (* Van Chan Ngo - 2017 *)
 
-open CS_Interop
-
 let input_file = ref ""
 let main_func = ref None
 let dump_ai = ref false
@@ -170,7 +168,8 @@ let main () =
         Format.printf "Sorry, I could not find a bound.@.";
         1
       | Some (annots, p) ->
-        Format.printf "Upper bound for %a: %a@." poly_print query poly_print p;
+        (*Format.printf "Upper bound for %a: %a@." poly_print query poly_print p;*)
+        Format.printf "Upper bound: %a@." poly_print (Polynom.Poly.sub p query);
         Format.printf "Degree: %d@." (Polynom.Poly.degree p);
         begin try
           Coqgen.dump fstart (globals, g_funcl) query p AI.print_as_coq ai_results annots

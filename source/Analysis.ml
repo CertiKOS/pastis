@@ -608,10 +608,12 @@ let run ai_results ai_is_nonneg (gl, fl) =
     | None -> None
     | Some sol ->
       let make_poly = Potential.annot_sol sol in
+      (*
       List.iter begin fun a ->
         Format.eprintf "Dump: %a@."
           Poly.print_ascii (make_poly a)
       end !debug_dumps;
+      *)
       let annots_final = Hashtbl.create 11 in
       Hashtbl.iter (fun fname (_, func_annot) ->
         let func_annots =
