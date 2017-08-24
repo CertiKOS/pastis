@@ -1,4 +1,5 @@
 (* Quentin Carbonneaux - 2016-2017 *)
+(* Van Chan Ngo - 2017 *)
 
 open Graph
 open Types

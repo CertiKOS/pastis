@@ -1,6 +1,8 @@
 (* Quentin Carbonneaux - 2016-2017 *)
 (* Van Chan Ngo - 2017 *)
 
+open CS_Interop
+
 let input_file = ref ""
 let main_func = ref None
 let dump_ai = ref false
@@ -73,7 +75,6 @@ let exec_llvm_reader f =
 
 let main () =
   Arg.parse argspec annonarg usagemsg;
-  if !input_file = "" then failarg "no input file provided";
   try
     let ends_with s s' =
       let ls' = String.length s' and ls = String.length s in
@@ -81,34 +82,40 @@ let main () =
     in
     let globals, g_funcl =
       try
-        if ends_with ".imp" !input_file then
-          let globals, imp_file = IMP.parse_file !input_file in
+        if !input_file = "" then
+          let globals, imp_file = IMP.parse_ic stdin in
           globals, List.map Graph.from_imp imp_file
-        else if ends_with ".o" !input_file
-             || ends_with ".bc" !input_file then
-          let ic = exec_llvm_reader !input_file in
-          try
-            let gfunc = Graph_Reader.read_func ic in
-            let gfunc = Graph.add_loop_counter "z" gfunc in
-            [], [gfunc]
-          with End_of_file ->
-            match Unix.close_process_in ic with
-            | Unix.WEXITED 0 -> failwith "llvm-reader should have failed"
-            | Unix.WEXITED _ ->
-              Format.eprintf "%s: llvm-reader could not parse '%s'@."
-                Sys.argv.(0) !input_file;
-              raise Utils.Error
-            | _ ->
-              Format.eprintf "%s: llvm-reader process was killed@."
-                Sys.argv.(0);
-              raise Utils.Error
-        else begin
-          Format.eprintf "%s: unknown input file type for '%s'@."
-            Sys.argv.(0) !input_file;
-          raise Utils.Error
+        else
+        begin 
+          if ends_with ".imp" !input_file then
+            let globals, imp_file = IMP.parse_file !input_file in
+            globals, List.map Graph.from_imp imp_file
+          else if ends_with ".o" !input_file
+               || ends_with ".bc" !input_file then
+            let ic = exec_llvm_reader !input_file in
+            try
+              let gfunc = Graph_Reader.read_func ic in
+              let gfunc = Graph.add_loop_counter "z" gfunc in
+              [], [gfunc]
+            with End_of_file ->
+              match Unix.close_process_in ic with
+              | Unix.WEXITED 0 -> failwith "llvm-reader should have failed"
+              | Unix.WEXITED _ ->
+                Format.eprintf "%s: llvm-reader could not parse '%s'@."
+                  Sys.argv.(0) !input_file;
+                raise Utils.Error
+              | _ ->
+                Format.eprintf "%s: llvm-reader process was killed@."
+                  Sys.argv.(0);
+                raise Utils.Error
+          else begin
+            Format.eprintf "%s: unknown input file type for '%s'@."
+              Sys.argv.(0) !input_file;
+            raise Utils.Error
+          end
         end
       with Sys_error _ ->
-        Format.eprintf "%s: cannot open file '%s'@."
+        Format.eprintf "%s: cannot open file or channel '%s'@."
           Sys.argv.(0) !input_file;
         raise Utils.Error
     in

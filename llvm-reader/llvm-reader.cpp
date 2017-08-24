@@ -55,7 +55,7 @@ public:
 struct Expr {
 
 	/* Expression class to build and output
-	 * the expressions used by the compexity
+	 * the expressions used by the complexity
 	 * analysis.
 	 */
 

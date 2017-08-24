@@ -1,3 +1,6 @@
+(* Van Chan Ngo - 2017 *)
+
+(*
 open Types
 open Graph
 open CS_Interop_Types
@@ -46,7 +49,6 @@ module Make_Graph(Q: CS_Interop_Types.CS_Querier) = struct
     let ret = ref "" in
     let name = fname in
     let locs = get_locs fdesc in
-    let _args = get_args fdesc in
     let focus = [] in
 
     let new_node () =
@@ -192,3 +194,4 @@ module Make_Graph(Q: CS_Interop_Types.CS_Querier) = struct
     List.map (Graph.add_loop_counter "z") g_prog
 
 end
+*)
